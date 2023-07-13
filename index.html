@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="modal-loading" class="modal-loading">
+      <div class="loading-container">
+        <img class="logo" src="./asset/img/logo.jpg" alt="Logo công ty" />
+        <h2 class="loading-text">BKT Authoring Tool.......</h2>
+        <div class="loading">
+          <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <form id="form" action="">
+      <div class="title-question">Find words/ phrases in the box to describle the photos. Then listen to check your
+        answer</div>
+
+
+      <audio class="audio" controls>
+        <source src=${dataItem?.ItemInfo[0]?.Question?.MediaUrl} type="audio/mpeg" />
+      </audio>
+      <div class="list-img2">
+        <div class="wrapper-img">
+          <div class="img-e">
+            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+          </div>
+          <div class="img-e">
+            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+          </div>
+          <div class="img-e">
+            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+          </div>
+          <div class="img-e">
+            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+          </div>
+        </div>
+        <div class="wrapper-img">
+          <div class="img-e">
+            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+          </div>
+          <div class="img-e">
+            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+          </div>
+          <div class="img-e">
+            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+          </div>
+          <div class="img-e">
+            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+
+
+  </div>
+  <div class="wrapper-check">
+    <button id="check" class="check">Check</button>
+  </div>
+  </form> -->
+
+    <ul id="sortable-list">
+      <li draggable="true">Item 1</li>
+      <li draggable="true">Item 2</li>
+      <li draggable="true">Item 3</li>
+      <li draggable="true">Item 4</li>
+    </ul>
+
+    <!--  -->
+    <div class="wrapper-button">
+      <button id="button1">Pre</button>
+      <button id="button2">Next</button>
+    </div>
+    <div id="wrapper-close-menu" class="wrapper-close-menu">
+      <button id="close" class="close">Đóng</button>
+      <div id="menu" class="menu"></div>
+    </div>
+
+    <div id="container" class="wrapper2"></div>
+  </div>
+</body>
+<script src="./main.js"></script>
+
+</html>
