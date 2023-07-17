@@ -3212,49 +3212,66 @@ const app = () => {
           dataRight.push([])
           dataLeftRandom.push([])
 
-          function randomizeText(text) {
-            console.log("text", text);
-            // Tách các từ trong chuỗi văn bản
-            // Đảo ngẫu nhiên thứ tự các từ
-            var randomizedWords = shuffleArray(text);
-            console.log("randomizedWordsssss", randomizedWords);
-            // Kết hợp các từ lại thành chuỗi văn bản mới
 
-            return randomizedWords;
-          }
-
-          function shuffleArray(array) {
-            console.log("array", array);
-            var currentIndex = array.length, temporaryValue, randomIndex;
-            // Trong khi còn phần tử chưa được xáo trộn
-            while (0 !== currentIndex) {
-              // Chọn một phần tử ngẫu nhiên còn lại
-              randomIndex = Math.floor(Math.random() * currentIndex);
-              currentIndex -= 1;
-
-              // Hoán đổi phần tử hiện tại với phần tử ngẫu nhiên
-              temporaryValue = array[currentIndex];
-              array[currentIndex] = array[randomIndex];
-              array[randomIndex] = temporaryValue;
-            }
-
-            return array;
-          }
 
           dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((item, index) => {
             dataLeft[i].push({ id: item?.Id, value: item?.AnswerLeft?.Value })
-            console.log("dataLeft", dataLeft);
           })
 
           dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((item, index) => {
             dataRight[i].push({ id: item?.Id, value: item?.AnswerRight?.Value })
-            console.log("dataRight", dataRight);
+
+          })
+          let randomizedText = randomizeText(dataLeft[i]);
+          dataLeftRandom[i].push(...randomizedText)
+          iQuizJoinImageImage(intermediary, dataItem, i);
+        }
+        // iQuizJoinTextImage
+        else if (dataItem?.Name === "iQuizJoinTextImage") {
+          dataLeft.push([])
+          dataRight.push([])
+          dataLeftRandom.push([])
+
+
+
+          dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((item, index) => {
+            dataLeft[i].push({ id: item?.Id, value: item?.AnswerLeft?.Value })
+          })
+
+          dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((item, index) => {
+            dataRight[i].push({ id: item?.Id, value: item?.AnswerRight?.Value })
 
           })
           let randomizedText = randomizeText(dataLeft[i]);
           dataLeftRandom[i].push(...randomizedText)
           console.log("dataLeftRandom", dataLeftRandom);
-          iQuizJoinImageImage(intermediary, dataItem, i);
+          iQuizJoinTextImage(intermediary, dataItem, i);
+        }
+        // hàm random chung
+        function randomizeText(text) {
+          // Tách các từ trong chuỗi văn bản
+          // Đảo ngẫu nhiên thứ tự các từ
+          var randomizedWords = shuffleArray(text);
+          // Kết hợp các từ lại thành chuỗi văn bản mới
+
+          return randomizedWords;
+        }
+
+        function shuffleArray(array) {
+          var currentIndex = array.length, temporaryValue, randomIndex;
+          // Trong khi còn phần tử chưa được xáo trộn
+          while (0 !== currentIndex) {
+            // Chọn một phần tử ngẫu nhiên còn lại
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // Hoán đổi phần tử hiện tại với phần tử ngẫu nhiên
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+          }
+
+          return array;
         }
       } catch { }
     }
@@ -3765,108 +3782,97 @@ const app = () => {
 
 
   }
-  let listarrayQuịzoinImage = []
+  let listarrayQuizoinImage = []
+  let listarrayQuizoinImageRight = []
   function iQuizJoinImageImage(intermediary, dataItem, i) {
 
-    // 
-    const list = document.getElementById('sortable-list');
-    let dragStartIndex;
-
-    list.addEventListener('dragstart', handleDragStart);
-    list.addEventListener('dragover', handleDragOver);
-    list.addEventListener('drop', handleDrop);
-    list.addEventListener('dragend', handleDragEnd);
-    console.log("list", list);
-
-    function handleDragStart(event) {
-      dragStartIndex = Array.from(list.children).indexOf(event.target);
-      event.dataTransfer.effectAllowed = 'move';
-      event.dataTransfer.setData('text/plain', '');
-    }
-
-    function handleDragOver(event) {
-      event.preventDefault();
-      event.dataTransfer.dropEffect = 'move';
-    }
-
-    function handleDrop(event) {
-      event.preventDefault();
-      const dragEndIndex = Array.from(list.children).indexOf(event.target);
-      swapItems(dragStartIndex, dragEndIndex);
-    }
-
-    function handleDragEnd() {
-      // Reset drag-related variables or perform any necessary cleanup
-    }
-
-    function swapItems(fromIndex, toIndex) {
-      const items = Array.from(list.children);
-      console.log('items', items);
-      const item1 = items[fromIndex];
-      console.log('item1', item1);
-      const item2 = items[toIndex];
-      console.log('item2', item2);
-      list.insertBefore(item2, item1);
-    }
-    // 
-
-    listarrayQuịzoinImage = []
+    listarrayQuizoinImage.push([])
+    listarrayQuizoinImageRight.push([])
+    let listTG = JSON.parse(JSON.stringify(listarrayQuizoinImage))
+    let listTGRight = JSON.parse(JSON.stringify(listarrayQuizoinImageRight))
     intermediary.innerHTML = RenderFormQuizJoinImageImage(dataItem, i);
-    const listForm = document.querySelectorAll('#form')
 
 
-    listForm.forEach((form, index) => {
-
-      listarrayQuịzoinImage.push(form.querySelectorAll('.wrapper-img'))
-      console.log("listarrayQuịzoinImage", Array.from(listarrayQuịzoinImage[0][0].children));
-
-    })
-    // Lặp qua tất cả các thẻ input vừa được innerHTML vào
-    // listarrayQuịzoinImage.forEach((arrayCheckBoxs, indexArray) => {
-    //   arrayCheckBoxs?.listImgMove?.forEach((imgMove, indexImgMove) => {
-    //     imgMove.addEventListener("dragover", function (e) {
-    //       e.preventDefault()
-    //       console.log("dragover", e?.target);
-    //     });
-
-    //     imgMove.addEventListener("drop", function (e) {
-
-    //       console.log("drop", e?.target);
-
-    //     });
+    listTG[i].push(form.querySelectorAll('.wrapper-img'))
+    listTGRight[i].push(form.querySelectorAll('.wrapper-img2'))
 
 
+    listTG[i][0][0].addEventListener('dragstart', (event) => handleDragStart(event, "left"));
+    listTG[i][0][0].addEventListener('dragover', (event) => handleDragOver(event, "left"));
+    listTG[i][0][0].addEventListener('drop', (event) => handleDrop(event, "left"));
+    console.log("listTG[i][0][0]", listTG[i][0][0]);
+    listTGRight[i][0][0].addEventListener('dragstart', (event) => handleDragStart(event, "right"));
+    listTGRight[i][0][0].addEventListener('dragover', (event) => handleDragOver(event, "right"));
+    listTGRight[i][0][0].addEventListener('drop', (event) => handleDrop(event, "right"));
 
-    //   })
-    // })
+    let dragStartIndex;
+    let dragEndIndex;
+    function handleDragStart(event, location) {
+      console.log("event", event?.target);
+      if (location === "left") {
 
-    listarrayQuịzoinImage[0][0].addEventListener('dragstart', handleDragStart2);
-    listarrayQuịzoinImage[0][0].addEventListener('dragover', handleDragOver2);
-    listarrayQuịzoinImage[0][0].addEventListener('dragover', handleDrop2);
-    function handleDragStart2(event) {
-      console.log("event", event?.target?.parentNode);
-      dragStartIndex = Array.from(listarrayQuịzoinImage[0][0].children).indexOf(event.target?.parentNode);
-      console.log("dragStartIndex", dragStartIndex);
-      // event.dataTransfer.effectAllowed = 'move';
-      // event.dataTransfer.setData('text/plain', '');
+        dragStartIndex = { type: 'left', value: Array.from(listTG[i][0][0].children).indexOf(event.target?.parentNode) };
+      }
+      else {
+        dragStartIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target?.parentNode) }
+      }
+
     }
-    function handleDragOver2(event) {
+    function handleDragOver(event, location) {
       event.preventDefault();
 
     }
-    function handleDrop2(event) {
+    function handleDrop(event, location) {
       event.preventDefault();
-      console.log("event");
-      console.log("event", event?.target?.parentNode);
-      const dragEndIndex = Array.from(listarrayQuịzoinImage[0][0].children).indexOf(event.target?.parentNode);
-      console.log("drop", dragEndIndex);
-      event.dataTransfer.effectAllowed = 'move';
-      event.dataTransfer.setData('text/plain', '');
+      // console.log("even2t", event?.target);
+      if (location === "left") {
+        console.log("event.target?.parentNode", event.target?.parentNode);
+        dragEndIndex = { type: 'left', value: Array.from(listTG[i][0][0].children).indexOf(event.target?.parentNode) };
+        swapItems(dragStartIndex, dragEndIndex, "left");
+
+
+      }
+      else {
+        dragEndIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target?.parentNode) }
+        swapItems(dragStartIndex, dragEndIndex, "right");
+      }
+      // if (dragEndIndex !== -1) {
+      //   listTG[i][0][0].removeEventListener('drop', handleDrop);
+      // }
     }
+    function swapItems(dragStartIndex, dragEndIndex, location) {
+      if (dragStartIndex.type === dragEndIndex.type) {
+        if (location === "left") {
+          if (dataLeftRandom[i][dragStartIndex.value] !== undefined && dataLeftRandom[i][dragEndIndex.value] !== undefined && dragEndIndex.value !== -1) {
+            let temp = dataLeftRandom[i][dragStartIndex.value];
+            dataLeftRandom[i][dragStartIndex.value] = dataLeftRandom[i][dragEndIndex.value];
+            dataLeftRandom[i][dragEndIndex.value] = temp;
+            // listTG = JSON.parse(JSON.stringify(listarrayQuizoinImage))
+            iQuizJoinImageImage(intermediary, dataItem, i)
+          }
+        }
+        else {
+          if (dataRight[i][dragStartIndex.value] !== undefined && dataRight[i][dragEndIndex.value] !== undefined && dragEndIndex.value !== -1) {
+            let temp = dataRight[i][dragStartIndex.value];
+            dataRight[i][dragStartIndex.value] = dataRight[i][dragEndIndex.value];
+            dataRight[i][dragEndIndex.value] = temp;
+            // listTG = JSON.parse(JSON.stringify(listarrayQuizoinImage))
+            iQuizJoinImageImage(intermediary, dataItem, i)
+          }
+        }
+      }
+      else {
+        console.log("sai");
+      }
+
+
+
+    }
+
+
 
     // handle btnCheck
     const listCheckBtn = document.querySelectorAll("#check");
-
     const spanElementDetail = document.createElement("span");
     listCheckBtn.forEach((checkBtn, index) => {
       spanElementDetail.setAttribute("idpl", checkBtn?.getAttribute("idpl"))
@@ -3875,7 +3881,166 @@ const app = () => {
         const wrapperCheck = checkBtn.parentNode;
         let isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
         const isIndex = +spanElementDetail.getAttribute("idpl")
-        //  code
+        let count = 0;
+
+        dataRight.forEach((itemRight, i) => {
+          itemRight.forEach((item, index) => {
+            if (item.id === dataLeftRandom[i][index].id) {
+              count++;
+              console.log("count", count);
+            }
+          });
+        });
+        if (count === 0) {
+          answerFail(spanElementDetail)
+        }
+        else {
+
+          answerSuccess(spanElementDetail, true, count, dataRight[i]?.length)
+        }
+        console.log("dataRight", dataRight);
+        console.log("dataLeftRandom", dataLeftRandom);
+
+
+        if (isExactly) {
+          wrapperCheck.insertBefore(spanElementDetail, checkBtn);
+        }
+
+      });
+    })
+
+
+  }
+  // iQuizJoinTextImageư
+  let listarrayQuizoinTextImage = []
+  let listarrayQuizoinTextImageRight = []
+  function iQuizJoinTextImage(intermediary, dataItem, i) {
+
+    listarrayQuizoinTextImage.push([])
+    listarrayQuizoinTextImageRight.push([])
+    let listTG = JSON.parse(JSON.stringify(listarrayQuizoinTextImage))
+    let listTGRight = JSON.parse(JSON.stringify(listarrayQuizoinTextImageRight))
+    intermediary.innerHTML = RenderFormQuizJoinTextImage(dataItem, i);
+
+
+    listTG[i].push(form.querySelectorAll('.wrapper-img'))
+
+    listTGRight[i].push(form.querySelectorAll('.wrapper-img2'))
+
+
+    listTG[i][0][0].addEventListener('dragstart', (event) => handleDragStart(event, "left"));
+    listTG[i][0][0].addEventListener('dragover', (event) => handleDragOver(event, "left"));
+    listTG[i][0][0].addEventListener('drop', (event) => handleDrop(event, "left"));
+    // console.log("listTG[i][0][0]", listTG[i][0][0]);
+    listTGRight[i][0][0].addEventListener('dragstart', (event) => handleDragStart(event, "right"));
+    listTGRight[i][0][0].addEventListener('dragover', (event) => handleDragOver(event, "right"));
+    listTGRight[i][0][0].addEventListener('drop', (event) => handleDrop(event, "right"));
+
+    let dragStartIndex;
+    let dragEndIndex;
+    function handleDragStart(event, location) {
+
+      console.log("event", event?.target);
+      if (location === "left") {
+        console.log("listTG[i][0][0].children", listTG[i][0][0].children);
+        console.log("event?.target", event?.target);
+        dragStartIndex = { type: 'left', value: Array.from(listTG[i][0][0].children).indexOf(event?.target) };
+        console.log('dragStartIndex', dragStartIndex);
+      }
+      else {
+        dragStartIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target?.parentNode) }
+      }
+      // event.dataTransfer.effectAllowed = 'move';
+      // event.dataTransfer.setData('text/plain', '');
+    }
+    function handleDragOver(event, location) {
+      event.preventDefault();
+
+    }
+    function handleDrop(event, location) {
+      event.preventDefault();
+      console.log("even2t", event?.target);
+      if (location === "left") {
+        dragEndIndex = { type: 'left', value: Array.from(listTG[i][0][0].children).indexOf(event.target) };
+        console.log("dragEndIndexdragEndIndex", dragEndIndex);
+        swapItems(dragStartIndex, dragEndIndex, "left");
+
+      }
+      else {
+        dragEndIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target?.parentNode) }
+        swapItems(dragStartIndex, dragEndIndex, "right");
+      }
+      // if (dragEndIndex !== -1) {
+      //   listTG[i][0][0].removeEventListener('drop', handleDrop);
+      // }
+    }
+    function swapItems(dragStartIndex, dragEndIndex, location) {
+      if (dragStartIndex.type === dragEndIndex.type) {
+
+        if (location === "left") {
+          console.log("dataLeftRandom[i][dragStartIndex.value]", dataLeftRandom[i][dragStartIndex.value]);
+          console.log("dataLeftRandom[i][dragEndIndex.value]", dataLeftRandom[i][dragEndIndex.value]);
+
+          if (dataLeftRandom[i][dragStartIndex.value] !== undefined && dataLeftRandom[i][dragEndIndex.value] !== undefined) {
+
+            let temp = dataLeftRandom[i][dragStartIndex.value];
+            dataLeftRandom[i][dragStartIndex.value] = dataLeftRandom[i][dragEndIndex.value];
+            dataLeftRandom[i][dragEndIndex.value] = temp;
+            // listTG = JSON.parse(JSON.stringify(listarrayQuizoinTextImage))
+            iQuizJoinTextImage(intermediary, dataItem, i)
+          }
+        }
+        else {
+          if (dataRight[i][dragStartIndex.value] !== undefined && dataRight[i][dragEndIndex.value] !== undefined && dragEndIndex.value !== -1) {
+            let temp = dataRight[i][dragStartIndex.value];
+            dataRight[i][dragStartIndex.value] = dataRight[i][dragEndIndex.value];
+            dataRight[i][dragEndIndex.value] = temp;
+            // listTG = JSON.parse(JSON.stringify(listarrayQuizoinTextImage))
+            iQuizJoinTextImage(intermediary, dataItem, i)
+          }
+        }
+      }
+      else {
+        console.log("sai");
+      }
+
+
+
+    }
+
+
+
+    // handle btnCheck
+    const listCheckBtn = document.querySelectorAll("#check");
+    const spanElementDetail = document.createElement("span");
+    listCheckBtn.forEach((checkBtn, index) => {
+      spanElementDetail.setAttribute("idpl", checkBtn?.getAttribute("idpl"))
+      checkBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        const wrapperCheck = checkBtn.parentNode;
+        let isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
+        const isIndex = +spanElementDetail.getAttribute("idpl")
+        let count = 0;
+
+        dataRight.forEach((itemRight, i) => {
+          itemRight.forEach((item, index) => {
+            if (item.id === dataLeftRandom[i][index].id) {
+              count++;
+              console.log("count", count);
+            }
+          });
+        });
+        if (count === 0) {
+          answerFail(spanElementDetail)
+        }
+        else {
+
+          answerSuccess(spanElementDetail, true, count, dataRight[i]?.length)
+        }
+        console.log("dataRight", dataRight);
+        console.log("dataLeftRandom", dataLeftRandom);
+
+
         if (isExactly) {
           wrapperCheck.insertBefore(spanElementDetail, checkBtn);
         }
@@ -4506,20 +4671,21 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
       <div class="list-img2">
     
         <div class="wrapper-img">
-          ${dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((itemLeft) => {
+          ${dataLeftRandom[i]?.map((itemLeft) => {
+
       return `
                <div draggable="true" class="img-e">
-            <img class="img2" src=${itemLeft?.AnswerLeft?.Value} alt="">
+            <img class="img2" src=${itemLeft?.value} alt="">
           </div>`
-    })} 
+    }).join(' ')} 
         </div>
         <div class="wrapper-img2">
-          ${dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((itemRight) => {
+          ${dataRight[i]?.map((itemRight) => {
       return `
                <div class="img-e">
-            <img class="img" src=${itemRight?.AnswerRight?.Value} alt="">
+            <img class="img" src=${itemRight?.value} alt="">
           </div>`
-    })} 
+    }).join(' ')} 
         </div>
         
 
@@ -4528,7 +4694,47 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
 
   </div>
   <div class="wrapper-check">
-    <button id="check" class="check">Check</button>
+    <button id="check" class="check" idpl= ${dataItem?.Id} >Check</button>
+  </div>
+  </form>`;
+  }
+
+  // Tạo html form để đẩy vào thẻ div
+  function RenderFormQuizJoinTextImage(dataItem, i) {
+    return `  <form id="form" action="">
+      <div class="title-question">${dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Value}</div>
+
+
+      <audio class="audio" controls>
+        <source src=${dataItem?.ItemInfo[0]?.QuestionQuizJoin?.MediaUrl} type="audio/mpeg" />
+      </audio>
+      <div class="list-textimg">
+    
+        <div class="wrapper-img">
+          ${dataLeftRandom[i]?.map((itemLeft) => {
+
+      return `
+               <div draggable="true" class="img-e">
+                   ${itemLeft?.value}
+              </div>`
+    }).join(' ')} 
+        </div>
+        <div class="wrapper-img2">
+          ${dataRight[i]?.map((itemRight) => {
+      return `
+               <div class="img-e2">
+                  <img class="img" src=${itemRight?.value} alt="">
+               </div>`
+    }).join(' ')} 
+        </div>
+        
+
+      </div>
+
+
+  </div>
+  <div class="wrapper-check">
+    <button id="check" class="check" idpl= ${dataItem?.Id} >Check</button>
   </div>
   </form>`;
   }
@@ -4561,7 +4767,7 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
             console.log("zo")
             countDaAnHien = -1
           }
-          console.log('countDaAnHien', countDaAnHien);
+
 
           countDaAnHien++
           return `<label class="label-anhien">
