@@ -683,7 +683,8 @@ form {
   .wrapper-img2 {
     margin: 30px;
 
-    .img-e {
+    .img-e,
+    .img-e3 {
       height: 60px;
       width: 100%;
       object-fit: contain;
@@ -698,7 +699,26 @@ form {
 
 
 
-      .text {}
+    }
+
+    .img-e.true {
+      background-color: #016e35;
+    }
+
+    .img-e2.true {
+      background-color: #016e35;
+    }
+
+    .img-e.false {
+      background-color: #a31919;
+    }
+
+    .img-e2.false {
+      background-color: #a31919;
+    }
+
+    .img-e3 {
+      background-color: #da971b;
     }
 
     .img-e2 {
@@ -716,4 +736,46 @@ form {
       }
     }
   }
+}
+
+
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 70%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+
+  .item-close {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .wrapper-img-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+
+    .img-modal {
+      border-radius: 50%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
 }

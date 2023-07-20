@@ -2284,6 +2284,135 @@ const fakeData = [
             IsRemoved: false,
             IsActived: false,
           },
+          {
+            Id: "1",
+            Name: "iQuizJoinImageImage",
+            Type: "module",
+            X: 1037.896411342372,
+            Y: 368.0073999327279,
+            Width: 510.436287868559,
+            Height: 465.035054497571,
+            ScaleX: 1.0,
+            ScaleY: 1.0,
+            Rotation: 0,
+            ItemInfo: [
+              {
+                Font: "Arial",
+                Size: 14,
+                Color: "0x333333",
+                Bold: true,
+                Underline: false,
+                Align: false,
+                Leading: 6,
+                Question: {
+                  Value: null,
+                  SelectIndex: 0,
+                  MediaType: null,
+                  MediaUrl: null,
+                  Answers: [],
+                },
+                QuestionQuizJoin: {
+                  Value:
+                    "Match&nbsp;the&nbsp;pictures&nbsp;with&nbsp;the&nbsp;customs&nbsp;and&nbsp;traditions.",
+                  MediaType: "audio",
+                  MediaUrl: "http://resource.bkt.net.vn/AudioMP3/14.mp3",
+                  Answers: [
+                    {
+                      Id: "answer-0",
+                      AnswerLeft: {
+                        Id: "left-0",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-1.jpg",
+                        Index: 0,
+                      },
+                      AnswerRight: {
+                        Id: "right-0",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-2.jpg",
+                        Index: 0,
+                      },
+                    },
+                    {
+                      Id: "answer-1",
+                      AnswerLeft: {
+                        Id: "left-1",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-3.png",
+                        Index: 1,
+                      },
+                      AnswerRight: {
+                        Id: "right-1",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-4.jpg",
+                        Index: 1,
+                      },
+                    },
+                    {
+                      Id: "answer-2",
+                      AnswerLeft: {
+                        Id: "left-2",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-5.png",
+                        Index: 2,
+                      },
+                      AnswerRight: {
+                        Id: "right-2",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-6.jpg",
+                        Index: 2,
+                      },
+                    },
+                    {
+                      Id: "answer-3",
+                      AnswerLeft: {
+                        Id: "left-3",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-7.png",
+                        Index: 3,
+                      },
+                      AnswerRight: {
+                        Id: "right-3",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-8.jpg",
+                        Index: 3,
+                      },
+                    },
+                    {
+                      Id: "answer-4",
+                      AnswerLeft: {
+                        Id: "left-4",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-9.png",
+                        Index: 3,
+                      },
+                      AnswerRight: {
+                        Id: "right-4",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/14-10.jpg",
+                        Index: 3,
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+            Appear: {
+              Id: "NoID",
+              Name: "None",
+              Direction: "None",
+              Start: "Auto",
+              Speed: "0",
+              Repeat: "false",
+              Index: 1,
+              isAction: false,
+            },
+            Link: null,
+            Speech: { Value: "", IsMale: true },
+            Audio: null,
+            IsRemoved: false,
+            IsActived: false,
+          },
+
         ],
       },
       {
@@ -2299,6 +2428,120 @@ const fakeData = [
             Type: "module",
             X: 129.850020757478,
             Y: 77.1558580415225,
+            Width: 537.997988373885,
+            Height: 380.137112022386,
+            ScaleX: 1.0,
+            ScaleY: 1.0,
+            Rotation: 0,
+            ItemInfo: [
+              {
+                Font: "Arial",
+                Size: 14,
+                Color: "0x333333",
+                Bold: true,
+                Underline: false,
+                Align: false,
+                Leading: 6,
+                Question: {
+                  Value: null,
+                  SelectIndex: 0,
+                  MediaType: null,
+                  MediaUrl: null,
+                  Answers: [],
+                },
+                QuestionQuizJoin: {
+                  Value:
+                    "Match&nbsp;the&nbsp;pictures&nbsp;with&nbsp;the&nbsp;customs&nbsp;and&nbsp;traditions.",
+                  MediaType: "audio",
+                  MediaUrl: "http://resource.bkt.net.vn/AudioMP3/U1-L1-2-1.mp3",
+                  Answers: [
+                    {
+                      Id: "answer-0",
+                      AnswerLeft: {
+                        Id: "left-0",
+                        Type: "text",
+                        Value: "105,&nbsp;Hoa&nbsp;Binh&nbsp;Lane",
+                        Index: 1,
+                      },
+                      AnswerRight: {
+                        Id: "right-0",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/imagesPNG/A-1.jpg",
+                        Index: 1,
+                      },
+                    },
+                    {
+                      Id: "answer-1",
+                      AnswerLeft: {
+                        Id: "left-1",
+                        Type: "text",
+                        Value: "97,&nbsp;Village&nbsp;Road",
+                        Index: 2,
+                      },
+                      AnswerRight: {
+                        Id: "right-1",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/ImagesPNG/A-2.jpg",
+                        Index: 2,
+                      },
+                    },
+                    {
+                      Id: "answer-2",
+                      AnswerLeft: {
+                        Id: "left-2",
+                        Type: "text",
+                        Value: "75,&nbsp;Hai&nbsp;Ba&nbsp;Trung&nbsp;street",
+                        Index: 3,
+                      },
+                      AnswerRight: {
+                        Id: "right-2",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/ImagesPNG/A-3.jpg",
+                        Index: 3,
+                      },
+                    },
+                    {
+                      Id: "answer-3",
+                      AnswerLeft: {
+                        Id: "left-3",
+                        Type: "text",
+                        Value:
+                          "Flat&nbsp;8,&nbsp;second&nbsp;floor,&nbsp;City&nbsp;Towerl",
+                        Index: 4,
+                      },
+                      AnswerRight: {
+                        Id: "right-3",
+                        Type: "image",
+                        Value: "http://resource.bkt.net.vn/ImagesPNG/A-4.jpg",
+                        Index: 4,
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+            Appear: {
+              Id: "NoID",
+              Name: "None",
+              Direction: "None",
+              Start: "Auto",
+              Speed: "0",
+              Repeat: "false",
+              Index: 1,
+              isAction: false,
+            },
+            Link: null,
+            Speech: { Value: "", IsMale: true },
+            Audio: null,
+            IsRemoved: false,
+            IsActived: false,
+          },
+          {
+            Id: "1",
+            Name: "iQuizJoinTextImage",
+            Type: "module",
+            X: 1029.850020757478,
+            Y: 377.1558580415225,
             Width: 537.997988373885,
             Height: 380.137112022386,
             ScaleX: 1.0,
@@ -2797,11 +3040,11 @@ const app = () => {
   const audioFail = new Audio("./asset/audio/incorrect.mp3");
   const audioRefesh = new Audio("./asset/audio/refresh.mp3");
 
+  const listLi = [];
   let listarrayChooseAndComplete = []
   let dataLeft = []
   let dataRight = []
   let dataLeftRandom = []
-  const listLi = [];
   let isClose = false;
   let count = 0;
   let countToltal = 0;
@@ -2818,6 +3061,10 @@ const app = () => {
   let listAnswerChooseAndComp = []
   let listAnswerChoosed = []
 
+  let listarrayQuizoinTextImage = []
+  let listarrayQuizoinTextImageRight = []
+
+  // var i
   function Loading() {
     let loadingIntermediary = loading;
     loadingIntermediary.classList.add("active");
@@ -2831,9 +3078,9 @@ const app = () => {
   function buildMenu(data, parentElement, isActive) {
     var ul = document.createElement("ul");
 
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
+      // i = i
       var menuItem = document.createElement("li");
-
       var datasetHtml = "";
       if (isActive === true) {
         datasetHtml += ` data-Title="${data[i]["Title"]}" data-Main="true" data-Count="0"`;
@@ -2894,6 +3141,8 @@ const app = () => {
 
   // Hàm xử lý sự kiện click
   function handleClick(event, idActiveClick) {
+    listarrayQuizoinTextImage = []
+    listarrayQuizoinTextImageRight = []
     dataLeft = []
     dataLeftRandom = []
     dataRight = []
@@ -2941,6 +3190,7 @@ const app = () => {
       try {
         const dataItem = JSON.parse(currentElement["iteminfo" + i]);
         console.log("dataItem", dataItem);
+
         var divElement = document.createElement("div");
 
         const intermediary = divElement;
@@ -3014,7 +3264,7 @@ const app = () => {
 
         // Thêm bài tập iListenAndTick
         else if (dataItem?.Name === "iListenAndTick") {
-          iListenAndTick(intermediary, dataItem, spanElement);
+          iListenAndTick(intermediary, dataItem);
 
           // Thêm bài tập iListenAndNumber
         } else if (dataItem?.Name === "iListenAndNumber") {
@@ -3079,9 +3329,7 @@ const app = () => {
           let replacedString = replaceSubstringInRange(da, dataorigin);
           DA_Drop[i].push(...drop,)
           DA_Hiden[i].push(...replacedString,)
-          console.log("DA_Hiden", DA_Hiden);
-          iAnHien(
-            intermediary,
+          iAnHien(intermediary,
             dataItem,
             DA_Drop,
             DA_Hiden,
@@ -3139,8 +3387,6 @@ const app = () => {
           let replacedString = replaceSubstringInRange(da, dataorigin);
           DA_Drop[i].push(...drop,)
           DA_Hiden[i].push(...replacedString,)
-          console.log("DA_Drop", DA_Drop);
-          console.log("DA_Hiden", DA_Hiden);
           iDienKhuyet(
             intermediary,
             dataItem,
@@ -3157,7 +3403,6 @@ const app = () => {
           function randomizeText(text) {
             // Tách các từ trong chuỗi văn bản
             var words = text.split(",");
-            console.log("words", words);
             // Đảo ngẫu nhiên thứ tự các từ
             var randomizedWords = shuffleArray(words);
             // Kết hợp các từ lại thành chuỗi văn bản mới
@@ -3194,7 +3439,6 @@ const app = () => {
           }
           let dataReplaceRes = dataReplace.join('').split(' ')
           let answerSuccess = dataReplace.join('').split(' ').join(' ')
-          console.log('answerSuccess', answerSuccess);
           let ExtendDragInfo = []
           dataItem?.ItemInfo[0]?.Question?.ExtendDragInfo?.map((item, index) => {
             ExtendDragInfo.push(item?.Data)
@@ -3203,7 +3447,6 @@ const app = () => {
           dataReplaceRes = dataReplaceRes + " " + ExtendDragInfo;
 
           var randomizedText = randomizeText(dataReplaceRes);
-          console.log("randomizedText", randomizedText);
           iChooseAndComplete(intermediary, dataItem, randomizedText, i, answerSuccess);
         }
         // iQuizJoinImageImage
@@ -3212,22 +3455,41 @@ const app = () => {
           dataRight.push([])
           dataLeftRandom.push([])
 
-
-
+          listarrayQuizoinTextImage.push([])
+          listarrayQuizoinTextImageRight.push([])
           dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((item, index) => {
-            dataLeft[i].push({ id: item?.Id, value: item?.AnswerLeft?.Value })
+            dataLeft[i].push({ id: item?.Id, value: item?.AnswerLeft?.Value, active: null })
           })
 
           dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((item, index) => {
-            dataRight[i].push({ id: item?.Id, value: item?.AnswerRight?.Value })
+            dataRight[i].push({ id: item?.Id, value: item?.AnswerRight?.Value, active: null })
 
           })
           let randomizedText = randomizeText(dataLeft[i]);
-          dataLeftRandom[i].push(...randomizedText)
-          iQuizJoinImageImage(intermediary, dataItem, i);
+          dataLeftRandom[i].push(...randomizedText,)
+          iQuizJoinImageImage(intermediary, dataItem, i, containerElement);
         }
         // iQuizJoinTextImage
         else if (dataItem?.Name === "iQuizJoinTextImage") {
+          dataLeft.push([])
+          dataRight.push([])
+          dataLeftRandom.push([])
+
+          listarrayQuizoinTextImage.push([])
+          listarrayQuizoinTextImageRight.push([])
+          dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((item, index) => {
+            dataLeft[i].push({ id: item?.Id, value: item?.AnswerLeft?.Value, active: null })
+          })
+
+          dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Answers?.map((item, index) => {
+            dataRight[i].push({ id: item?.Id, value: item?.AnswerRight?.Value, active: null })
+          })
+          let randomizedText = randomizeText(dataLeft[i]);
+          dataLeftRandom[i].push(...randomizedText)
+          iQuizJoinTextImage(intermediary, dataItem, i, containerElement);
+        }
+        // iQuizJoin
+        else if (dataItem?.Name === "iQuizJoin") {
           dataLeft.push([])
           dataRight.push([])
           dataLeftRandom.push([])
@@ -3244,9 +3506,9 @@ const app = () => {
           })
           let randomizedText = randomizeText(dataLeft[i]);
           dataLeftRandom[i].push(...randomizedText)
-          console.log("dataLeftRandom", dataLeftRandom);
-          iQuizJoinTextImage(intermediary, dataItem, i);
+          iQuizJoin(intermediary, dataItem, i);
         }
+
         // hàm random chung
         function randomizeText(text) {
           // Tách các từ trong chuỗi văn bản
@@ -3728,7 +3990,6 @@ const app = () => {
     listForm.forEach((form, index) => {
 
       listarrayChooseAndComplete.push({ listBtnChoose: form.querySelectorAll('#btn'), index })
-      // console.log("listarrayChooseAndComplete", listarrayChooseAndComplete);
 
     })
     // Lặp qua tất cả các thẻ input vừa được innerHTML vào
@@ -3782,41 +4043,48 @@ const app = () => {
 
 
   }
-  let listarrayQuizoinImage = []
-  let listarrayQuizoinImageRight = []
-  function iQuizJoinImageImage(intermediary, dataItem, i) {
 
-    listarrayQuizoinImage.push([])
-    listarrayQuizoinImageRight.push([])
-    let listTG = JSON.parse(JSON.stringify(listarrayQuizoinImage))
-    let listTGRight = JSON.parse(JSON.stringify(listarrayQuizoinImageRight))
+  // iQuizJoinImageImage
+
+  function iQuizJoinImageImage(intermediary, dataItem, i, containerElement) {
+    console.log('i', i);
+    let count = [];
+
+    listTG = JSON.parse(JSON.stringify(listarrayQuizoinTextImage))
+    console.log("sds", listTG);
+    listTGRight = JSON.parse(JSON.stringify(listarrayQuizoinTextImageRight))
+
     intermediary.innerHTML = RenderFormQuizJoinImageImage(dataItem, i);
+    let listForm = document.querySelectorAll('#form')
+    listForm.forEach((form, index) => {
+
+      count.push([])
+      listTG[index].push(form.querySelector('.wrapper-img'))
+      listTGRight[index].push(form.querySelector('.wrapper-img2'))
+    })
 
 
-    listTG[i].push(form.querySelectorAll('.wrapper-img'))
-    listTGRight[i].push(form.querySelectorAll('.wrapper-img2'))
+    console.log("listTG", listTG);
+    listTG[i][0].addEventListener('dragstart', (event) => handleDragStart(event, "left"));
+    listTG[i][0].addEventListener('dragover', (event) => handleDragOver(event, "left"));
+    listTG[i][0].addEventListener('drop', (event) => handleDrop(event, "left"));
 
-
-    listTG[i][0][0].addEventListener('dragstart', (event) => handleDragStart(event, "left"));
-    listTG[i][0][0].addEventListener('dragover', (event) => handleDragOver(event, "left"));
-    listTG[i][0][0].addEventListener('drop', (event) => handleDrop(event, "left"));
-    console.log("listTG[i][0][0]", listTG[i][0][0]);
-    listTGRight[i][0][0].addEventListener('dragstart', (event) => handleDragStart(event, "right"));
-    listTGRight[i][0][0].addEventListener('dragover', (event) => handleDragOver(event, "right"));
-    listTGRight[i][0][0].addEventListener('drop', (event) => handleDrop(event, "right"));
+    listTGRight[i][0].addEventListener('dragstart', (event) => handleDragStart(event, "right"));
+    listTGRight[i][0].addEventListener('dragover', (event) => handleDragOver(event, "right"));
+    listTGRight[i][0].addEventListener('drop', (event) => handleDrop(event, "right"));
 
     let dragStartIndex;
     let dragEndIndex;
     function handleDragStart(event, location) {
-      console.log("event", event?.target);
       if (location === "left") {
 
-        dragStartIndex = { type: 'left', value: Array.from(listTG[i][0][0].children).indexOf(event.target?.parentNode) };
+        dragStartIndex = { type: 'left', value: Array.from(listTG[i][0].children).indexOf(event.target?.parentNode) };
       }
       else {
-        dragStartIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target?.parentNode) }
+        dragStartIndex = { type: 'right', value: Array.from(listTGRight[i][0].children).indexOf(event.target?.parentNode) }
       }
-
+      event.dataTransfer.effectAllowed = 'move';
+      event.dataTransfer.setData('text/plain', '');
     }
     function handleDragOver(event, location) {
       event.preventDefault();
@@ -3824,21 +4092,17 @@ const app = () => {
     }
     function handleDrop(event, location) {
       event.preventDefault();
-      // console.log("even2t", event?.target);
       if (location === "left") {
-        console.log("event.target?.parentNode", event.target?.parentNode);
-        dragEndIndex = { type: 'left', value: Array.from(listTG[i][0][0].children).indexOf(event.target?.parentNode) };
+        dragEndIndex = { type: 'left', value: Array.from(listTG[i][0].children).indexOf(event.target?.parentNode) };
         swapItems(dragStartIndex, dragEndIndex, "left");
 
 
       }
       else {
-        dragEndIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target?.parentNode) }
+        dragEndIndex = { type: 'right', value: Array.from(listTGRight[i][0].children).indexOf(event.target?.parentNode) }
         swapItems(dragStartIndex, dragEndIndex, "right");
       }
-      // if (dragEndIndex !== -1) {
-      //   listTG[i][0][0].removeEventListener('drop', handleDrop);
-      // }
+
     }
     function swapItems(dragStartIndex, dragEndIndex, location) {
       if (dragStartIndex.type === dragEndIndex.type) {
@@ -3847,8 +4111,8 @@ const app = () => {
             let temp = dataLeftRandom[i][dragStartIndex.value];
             dataLeftRandom[i][dragStartIndex.value] = dataLeftRandom[i][dragEndIndex.value];
             dataLeftRandom[i][dragEndIndex.value] = temp;
-            // listTG = JSON.parse(JSON.stringify(listarrayQuizoinImage))
-            iQuizJoinImageImage(intermediary, dataItem, i)
+
+            iQuizJoinImageImageLeft(intermediary, dataItem, i)
           }
         }
         else {
@@ -3856,19 +4120,18 @@ const app = () => {
             let temp = dataRight[i][dragStartIndex.value];
             dataRight[i][dragStartIndex.value] = dataRight[i][dragEndIndex.value];
             dataRight[i][dragEndIndex.value] = temp;
-            // listTG = JSON.parse(JSON.stringify(listarrayQuizoinImage))
-            iQuizJoinImageImage(intermediary, dataItem, i)
+
+            iQuizJoinImageImageRight(intermediary, dataItem, i)
           }
         }
       }
       else {
-        console.log("sai");
       }
 
 
 
     }
-
+    handleZoomImg(intermediary, containerElement)
 
 
     // handle btnCheck
@@ -3880,30 +4143,43 @@ const app = () => {
         event.preventDefault();
         const wrapperCheck = checkBtn.parentNode;
         let isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
-        const isIndex = +spanElementDetail.getAttribute("idpl")
-        let count = 0;
 
-        dataRight.forEach((itemRight, i) => {
-          itemRight.forEach((item, index) => {
-            if (item.id === dataLeftRandom[i][index].id) {
-              count++;
-              console.log("count", count);
-            }
-          });
-        });
-        if (count === 0) {
+        const filteredItemsTrue = dataRight[i].filter((item, index) => item.id === dataLeftRandom[i][index].id)
+        const filteredItemsFalse = dataRight[i].filter((item, index) => item.id !== dataLeftRandom[i][index].id)
+        filteredItemsTrue.forEach((dataLeft) => {
+          const indexTrue = dataLeftRandom[i].findIndex((x => x.id === dataLeft.id))
+
+
+          dataLeftRandom[i].splice(indexTrue, 1, { ...dataLeftRandom[i][indexTrue], active: true })
+
+
+        })
+
+        filteredItemsFalse.forEach((dataLeft) => {
+          const indexFalse = dataLeftRandom[i].findIndex((x => x.id === dataLeft.id))
+          console.log("indexFalse", indexFalse);
+
+          dataLeftRandom[i].splice(indexFalse, 1, { ...dataLeftRandom[i][indexFalse], active: false })
+
+
+        })
+        console.log("filteredItemsFalse", filteredItemsFalse);
+        count[i].shift();
+        count[i].push(filteredItemsTrue.length);
+
+        if (+count[i] === 0 && isExactly) {
           answerFail(spanElementDetail)
         }
-        else {
+        else if (count[i].length > 0 && isExactly) {
 
-          answerSuccess(spanElementDetail, true, count, dataRight[i]?.length)
+          answerSuccess(spanElementDetail, true, count[i], dataRight[i]?.length)
         }
-        console.log("dataRight", dataRight);
-        console.log("dataLeftRandom", dataLeftRandom);
 
 
         if (isExactly) {
           wrapperCheck.insertBefore(spanElementDetail, checkBtn);
+          iQuizJoinImageImageLeft(intermediary, dataItem, i, containerElement)
+          iQuizJoinImageImageRight(intermediary, dataItem, i, containerElement)
         }
 
       });
@@ -3911,17 +4187,208 @@ const app = () => {
 
 
   }
-  // iQuizJoinTextImageư
-  let listarrayQuizoinTextImage = []
-  let listarrayQuizoinTextImageRight = []
-  function iQuizJoinTextImage(intermediary, dataItem, i) {
 
-    listarrayQuizoinTextImage.push([])
-    listarrayQuizoinTextImageRight.push([])
-    let listTG = JSON.parse(JSON.stringify(listarrayQuizoinTextImage))
-    let listTGRight = JSON.parse(JSON.stringify(listarrayQuizoinTextImageRight))
+  // iQuizJoinTextImage
+  let listTG
+  let listTGRight
+  function iQuizJoinTextImage(intermediary, dataItem, i, containerElement) {
+    let count = [];
+
+    listTG = JSON.parse(JSON.stringify(listarrayQuizoinTextImage))
+    listTGRight = JSON.parse(JSON.stringify(listarrayQuizoinTextImageRight))
+
     intermediary.innerHTML = RenderFormQuizJoinTextImage(dataItem, i);
+    let listForm = document.querySelectorAll('#form')
+    listForm.forEach((form, index) => {
+      count.push([])
+      listTG[index].push(form.querySelector('.wrapper-img'))
+      listTGRight[index].push(form.querySelector('.wrapper-img2'))
+    })
 
+
+    listTG[i][0].addEventListener('dragstart', (event) => handleDragStart(event, "left"));
+    listTG[i][0].addEventListener('dragover', (event) => handleDragOver(event, "left"));
+    listTG[i][0].addEventListener('drop', (event) => handleDrop(event, "left"));
+
+    listTGRight[i][0].addEventListener('dragstart', (event) => handleDragStart(event, "right"));
+    listTGRight[i][0].addEventListener('dragover', (event) => handleDragOver(event, "right"));
+    listTGRight[i][0].addEventListener('drop', (event) => handleDrop(event, "right"));
+
+    let dragStartIndex;
+    let dragEndIndex;
+    function handleDragStart(event, location) {
+
+      if (location === "left") {
+        dragStartIndex = { type: 'left', value: Array.from(listTG[i][0].children).indexOf(event?.target) };
+      }
+      else {
+        dragStartIndex = { type: 'right', value: Array.from(listTGRight[i][0].children).indexOf(event.target?.parentNode) }
+      }
+
+    }
+    function handleDragOver(event, location) {
+      event.preventDefault();
+
+    }
+    function handleDrop(event, location) {
+      event.preventDefault();
+      if (location === "left") {
+        dragEndIndex = { type: 'left', value: Array.from(listTG[i][0].children).indexOf(event.target) };
+
+        swapItems(dragStartIndex, dragEndIndex, "left");
+
+      }
+      else {
+        dragEndIndex = { type: 'right', value: Array.from(listTGRight[i][0].children).indexOf(event.target?.parentNode) }
+        swapItems(dragStartIndex, dragEndIndex, "right");
+      }
+
+    }
+    function swapItems(dragStartIndex, dragEndIndex, location) {
+      if (dragStartIndex.type === dragEndIndex.type) {
+
+        if (location === "left") {
+          if (dataLeftRandom[i][dragStartIndex.value] !== undefined && dataLeftRandom[i][dragEndIndex.value] !== undefined) {
+
+            let temp = dataLeftRandom[i][dragStartIndex.value];
+            dataLeftRandom[i][dragStartIndex.value] = dataLeftRandom[i][dragEndIndex.value];
+            dataLeftRandom[i][dragEndIndex.value] = temp;
+
+            iQuizJoinTextImageLeft(intermediary, dataItem, i)
+          }
+        }
+        else {
+          if (dataRight[i][dragStartIndex.value] !== undefined && dataRight[i][dragEndIndex.value] !== undefined && dragEndIndex.value !== -1) {
+            let temp = dataRight[i][dragStartIndex.value];
+            dataRight[i][dragStartIndex.value] = dataRight[i][dragEndIndex.value];
+            dataRight[i][dragEndIndex.value] = temp;
+
+            iQuizJoinTextImageRight(intermediary, dataItem, i)
+
+          }
+        }
+      }
+      else {
+        console.log("sai");
+      }
+
+    }
+
+    // handleClick Zoom
+    handleZoomImg(intermediary, containerElement)
+
+
+    // handle btnCheck
+    const listCheckBtn = document.querySelectorAll("#check");
+    const spanElementDetail = document.createElement("span");
+    listCheckBtn.forEach((checkBtn, index) => {
+      spanElementDetail.setAttribute("idpl", checkBtn?.getAttribute("idpl"))
+      checkBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        const wrapperCheck = checkBtn.parentNode;
+        let isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
+
+        const filteredItemsTrue = dataRight[i].filter((item, index) => item.id === dataLeftRandom[i][index].id)
+        const filteredItemsFalse = dataRight[i].filter((item, index) => item.id !== dataLeftRandom[i][index].id)
+        filteredItemsTrue.forEach((dataLeft) => {
+          const indexTrue = dataLeftRandom[i].findIndex((x => x.id === dataLeft.id))
+
+
+          dataLeftRandom[i].splice(indexTrue, 1, { ...dataLeftRandom[i][indexTrue], active: true })
+
+
+        })
+
+        filteredItemsFalse.forEach((dataLeft) => {
+          const indexFalse = dataLeftRandom[i].findIndex((x => x.id === dataLeft.id))
+          console.log("indexFalse", indexFalse);
+
+          dataLeftRandom[i].splice(indexFalse, 1, { ...dataLeftRandom[i][indexFalse], active: false })
+
+
+        })
+        console.log("filteredItemsFalse", filteredItemsFalse);
+        count[i].shift();
+        count[i].push(filteredItemsTrue.length);
+
+        if (+count[i] === 0 && isExactly) {
+          answerFail(spanElementDetail)
+        }
+        else if (count[i].length > 0 && isExactly) {
+
+          answerSuccess(spanElementDetail, true, count[i], dataRight[i]?.length)
+        }
+
+
+        if (isExactly) {
+          wrapperCheck.insertBefore(spanElementDetail, checkBtn);
+          iQuizJoinTextImageLeft(intermediary, dataItem, i, containerElement)
+          iQuizJoinTextImageRight(intermediary, dataItem, i, containerElement)
+        }
+
+      });
+    })
+
+
+  }
+
+  // iQuizJoinTextImageLeft Right
+  function iQuizJoinTextImageLeft(intermediary, dataItem, i, containerElement) {
+    intermediary.querySelector(".wrapper-img").innerHTML = RenderFormQuizJoinTextImageLeft(dataItem, i);
+    handleZoomImg(intermediary, containerElement)
+
+
+  }
+  function iQuizJoinTextImageRight(intermediary, dataItem, i, containerElement) {
+    intermediary.querySelector(".wrapper-img2").innerHTML = RenderFormQuizJoinTextImageRight(dataItem, i);
+    // handleClick Zoom
+    handleZoomImg(intermediary, containerElement)
+
+  }
+
+  // iQuizJoinImageImageLeft Right
+  function iQuizJoinImageImageLeft(intermediary, dataItem, i, containerElement) {
+    intermediary.querySelector(".wrapper-img").innerHTML = RenderFormQuizJoinImageImageLeft(dataItem, i);
+    handleZoomImg(intermediary, containerElement)
+
+
+  }
+  function iQuizJoinImageImageRight(intermediary, dataItem, i, containerElement) {
+    intermediary.querySelector(".wrapper-img2").innerHTML = RenderFormQuizJoinImageImageRight(dataItem, i);
+    // handleClick Zoom
+    handleZoomImg(intermediary, containerElement)
+
+  }
+
+  // handleClick Zoom
+  function handleZoomImg(intermediary, containerElement) {
+    const listImg = intermediary.querySelectorAll(".img")
+    listImg.forEach((img) => {
+      img.addEventListener("dblclick", function (event) {
+        const srcImg = event?.target?.src;
+        const div = document.createElement("div")
+        div.innerHTML = RenderModalImg(srcImg)
+        containerElement.appendChild(div)
+        const listClose = div.querySelector(".item-close")
+        listClose.addEventListener('click', function (event) {
+          containerElement.removeChild(div)
+        })
+      })
+    })
+  }
+
+
+  // iQuizJoin
+  let listarrayQuizoin = []
+  let listarrayQuizoinRight = []
+  function iQuizJoin(intermediary, dataItem, i) {
+
+    listarrayQuizoin.push([])
+    listarrayQuizoinRight.push([])
+    let listTG = JSON.parse(JSON.stringify(listarrayQuizoin))
+    console.log('listTG', listTG);
+    let listTGRight = JSON.parse(JSON.stringify(listarrayQuizoinRight))
+    intermediary.innerHTML = RenderFormQuizJoin(i);
 
     listTG[i].push(form.querySelectorAll('.wrapper-img'))
 
@@ -3931,7 +4398,7 @@ const app = () => {
     listTG[i][0][0].addEventListener('dragstart', (event) => handleDragStart(event, "left"));
     listTG[i][0][0].addEventListener('dragover', (event) => handleDragOver(event, "left"));
     listTG[i][0][0].addEventListener('drop', (event) => handleDrop(event, "left"));
-    // console.log("listTG[i][0][0]", listTG[i][0][0]);
+
     listTGRight[i][0][0].addEventListener('dragstart', (event) => handleDragStart(event, "right"));
     listTGRight[i][0][0].addEventListener('dragover', (event) => handleDragOver(event, "right"));
     listTGRight[i][0][0].addEventListener('drop', (event) => handleDrop(event, "right"));
@@ -3940,18 +4407,13 @@ const app = () => {
     let dragEndIndex;
     function handleDragStart(event, location) {
 
-      console.log("event", event?.target);
       if (location === "left") {
-        console.log("listTG[i][0][0].children", listTG[i][0][0].children);
-        console.log("event?.target", event?.target);
         dragStartIndex = { type: 'left', value: Array.from(listTG[i][0][0].children).indexOf(event?.target) };
-        console.log('dragStartIndex', dragStartIndex);
       }
       else {
-        dragStartIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target?.parentNode) }
+        dragStartIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target) }
       }
-      // event.dataTransfer.effectAllowed = 'move';
-      // event.dataTransfer.setData('text/plain', '');
+
     }
     function handleDragOver(event, location) {
       event.preventDefault();
@@ -3959,15 +4421,13 @@ const app = () => {
     }
     function handleDrop(event, location) {
       event.preventDefault();
-      console.log("even2t", event?.target);
       if (location === "left") {
         dragEndIndex = { type: 'left', value: Array.from(listTG[i][0][0].children).indexOf(event.target) };
-        console.log("dragEndIndexdragEndIndex", dragEndIndex);
         swapItems(dragStartIndex, dragEndIndex, "left");
 
       }
       else {
-        dragEndIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target?.parentNode) }
+        dragEndIndex = { type: 'right', value: Array.from(listTGRight[i][0][0].children).indexOf(event.target) }
         swapItems(dragStartIndex, dragEndIndex, "right");
       }
       // if (dragEndIndex !== -1) {
@@ -3978,37 +4438,34 @@ const app = () => {
       if (dragStartIndex.type === dragEndIndex.type) {
 
         if (location === "left") {
-          console.log("dataLeftRandom[i][dragStartIndex.value]", dataLeftRandom[i][dragStartIndex.value]);
-          console.log("dataLeftRandom[i][dragEndIndex.value]", dataLeftRandom[i][dragEndIndex.value]);
 
           if (dataLeftRandom[i][dragStartIndex.value] !== undefined && dataLeftRandom[i][dragEndIndex.value] !== undefined) {
 
             let temp = dataLeftRandom[i][dragStartIndex.value];
             dataLeftRandom[i][dragStartIndex.value] = dataLeftRandom[i][dragEndIndex.value];
             dataLeftRandom[i][dragEndIndex.value] = temp;
-            // listTG = JSON.parse(JSON.stringify(listarrayQuizoinTextImage))
-            iQuizJoinTextImage(intermediary, dataItem, i)
+            // iQuizJoin(i)
+            // watchedDataLeftRandom.value = 2
+
           }
         }
         else {
-          if (dataRight[i][dragStartIndex.value] !== undefined && dataRight[i][dragEndIndex.value] !== undefined && dragEndIndex.value !== -1) {
+          if (dataRight[i][dragStartIndex.value] !== undefined && dataRight[i][dragEndIndex.value] !== undefined) {
             let temp = dataRight[i][dragStartIndex.value];
             dataRight[i][dragStartIndex.value] = dataRight[i][dragEndIndex.value];
             dataRight[i][dragEndIndex.value] = temp;
-            // listTG = JSON.parse(JSON.stringify(listarrayQuizoinTextImage))
-            iQuizJoinTextImage(intermediary, dataItem, i)
+            // iQuizJoin(i)
+            // watchedDataLeftRandom.value = 2
+
           }
         }
       }
       else {
-        console.log("sai");
       }
 
 
 
     }
-
-
 
     // handle btnCheck
     const listCheckBtn = document.querySelectorAll("#check");
@@ -4022,13 +4479,19 @@ const app = () => {
         const isIndex = +spanElementDetail.getAttribute("idpl")
         let count = 0;
 
-        dataRight.forEach((itemRight, i) => {
-          itemRight.forEach((item, index) => {
-            if (item.id === dataLeftRandom[i][index].id) {
-              count++;
-              console.log("count", count);
-            }
-          });
+
+        dataRight[i].forEach((item, index) => {
+
+          if (item.id === dataLeftRandom[i][index].id) {
+            // dataLeftRandom[i].splice(index, 1, { id: item.id, value: item.value, active: true })
+            // dataRight[i].splice(index, 1, { id: item.id, value: item.value, active: true })
+            count++;
+          }
+          else {
+            // dataLeftRandom[i].splice(index, 1, { id: item.id, value: item.value, active: false })
+            // dataRight[i].splice(index, 1, { id: item.id, value: item.value, active: false })
+          }
+
         });
         if (count === 0) {
           answerFail(spanElementDetail)
@@ -4037,12 +4500,13 @@ const app = () => {
 
           answerSuccess(spanElementDetail, true, count, dataRight[i]?.length)
         }
-        console.log("dataRight", dataRight);
-        console.log("dataLeftRandom", dataLeftRandom);
+
 
 
         if (isExactly) {
           wrapperCheck.insertBefore(spanElementDetail, checkBtn);
+
+
         }
 
       });
@@ -4050,6 +4514,28 @@ const app = () => {
 
 
   }
+  // 
+
+  // Tạo một Proxy để theo dõi biến dataLeftRandom
+  const watchedDataLeftRandom = new Proxy(
+    { value: dataLeftRandom },
+    {
+      set: function (target, prop, value) {
+        console.log("target", target);
+        console.log("value", value);
+        console.log("prop", prop);
+        console.log("target[prop] ", target[prop]);
+        // Khi giá trị của dataLeftRandom thay đổi
+        if (prop === "value" && value !== target.value) {
+          target.value = value;
+          iQuizJoin(i) // Gọi lại hàm iQuizJoin khi dataLeftRandom thay đổi
+        }
+        return true;
+      },
+    }
+  );
+
+  // 
 
   let listarrayCheckBoxsChoiceImg = []
   function iQuizSingleChoiceWithImage(intermediary, dataItem) {
@@ -4059,11 +4545,9 @@ const app = () => {
 
     const listForm = document.querySelectorAll('#form')
 
-    console.log("listForm", listForm);
 
     listForm.forEach((form, index) => {
       listarrayCheckBoxsChoiceImg.push({ listCheckBox: form.querySelectorAll('input[type="checkbox"]'), index })
-      console.log("listarrayCheckBoxsChoiceImg", listarrayCheckBoxsChoiceImg);
       // Lặp qua tất cả các thẻ input vừa được innerHTML vào
 
 
@@ -4075,7 +4559,6 @@ const app = () => {
         checkbox.addEventListener("change", function (e) {
 
           let value = e?.target?.value
-          console.log("value", value);
           arrayCheckBoxs?.listCheckBox.forEach((otherCheckbox) => {
             if (check.find(x => +x.idpl === +idpl)) {
               let indexArrayCheckbox = check.findIndex(
@@ -4088,7 +4571,6 @@ const app = () => {
             }
             else {
               check.push({ value, idpl: idpl });
-              console.log("check", check);
             }
 
             if (otherCheckbox !== checkbox) {
@@ -4142,7 +4624,6 @@ const app = () => {
     listForm.forEach((form, index) => {
 
       listarrayText.push({ listTextBox: form.querySelectorAll('input[type="text"]'), index })
-      console.log("listarrayText", listarrayText);
       // Lặp qua tất cả các thẻ input vừa được innerHTML vào
 
 
@@ -4184,7 +4665,6 @@ const app = () => {
                 valueInit: +e?.target?.getAttribute("valueAnswer"),
               });
             }
-            console.log("answerListenAndNumber[indexArray]", answerListenAndNumber);
           }
 
 
@@ -4197,7 +4677,6 @@ const app = () => {
     // handle btnCheck
 
     const listCheckBtn = document.querySelectorAll("#check");
-    console.log("listCheckBtn", listCheckBtn);
     const spanElementDetail = document.createElement("span");
     listCheckBtn.forEach((checkBtn, index) => {
       spanElementDetail.setAttribute("idpl", checkBtn?.getAttribute("idpl"))
@@ -4207,7 +4686,6 @@ const app = () => {
         const isIndex = +spanElementDetail.getAttribute("idpl")
         const isExactly = +checkBtn?.getAttribute("idpl") === isIndex
 
-        console.log("listarrayText[isIndex]", listarrayText[isIndex]);
 
         let countTrue = answerListenAndNumber[isIndex].filter(
           (answer) => +answer.valueAnswer === +answer.valueInit
@@ -4335,13 +4813,11 @@ const app = () => {
           let value = e?.target?.parentNode.getElementsByTagName("span")[0]
           if (e?.target?.checked !== false) {
             value.innerHTML = e?.target?.value
-            console.log("value", value);
             elementParent.classList.add("active")
           }
           else {
             value.innerHTML = "Mở"
             elementParent.classList.remove("active")
-            console.log("value2", value);
           }
 
         });
@@ -4375,21 +4851,17 @@ const app = () => {
         checkbox.addEventListener("change", function (e) {
 
           let value = e?.target?.value
-          console.log("value", value);
           let indexArrayCheckbox = arrayAnswerDienKhuyet[indexArray].findIndex(
             (x) => +x.indexCheckbox === +indexCheckbox
           );
           if (arrayAnswerDienKhuyet[indexArray].find(x => +x.indexCheckbox === +indexCheckbox && +x.indexArray === +indexArray)) {
             arrayAnswerDienKhuyet[indexArray].splice(indexArrayCheckbox, 1, { value, indexArray, indexCheckbox, initvalue: e?.target?.getAttribute("valueinit") })
-            console.log("arrayAnswerDienKhuyet", arrayAnswerDienKhuyet);
             if (arrayAnswerDienKhuyet[indexArray][indexArrayCheckbox]?.value === "") {
-              console.log("zo");
               arrayAnswerDienKhuyet[indexArray].splice(indexArrayCheckbox, 1)
             }
           }
           else {
             arrayAnswerDienKhuyet[indexArray].push({ value, indexArray, indexCheckbox, initvalue: e?.target?.getAttribute("valueinit") })
-            console.log("arrayAnswerDienKhuyet", arrayAnswerDienKhuyet);
           }
         });
       })
@@ -4405,11 +4877,9 @@ const app = () => {
         let countTrue = arrayAnswerDienKhuyet[i].filter(
           (answer) => answer.value === answer.initvalue
         )?.length;
-        console.log("countTrue", countTrue);
         // spanElementDetail.innerHTML = "";
         const isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
         const indexCheck = arrayAnswerDienKhuyet[i].findIndex(x => +x.idpl === +index)
-        console.log("indexCheck", indexCheck);
 
         if (arrayAnswerDienKhuyet[i]?.length === 0 && isExactly) {
           answerRefresh(spanElementDetail);
@@ -4739,6 +5209,111 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
   </form>`;
   }
 
+  // Tạo html form để đẩy vào thẻ div
+  function RenderFormQuizJoinTextImageLeft(dataItem, i) {
+
+    return `  
+    
+       
+          ${dataLeftRandom[i]?.map((itemLeft) => {
+      console.log("itemLeft", itemLeft);
+      return `
+               <div draggable="true" class="img-e ${itemLeft.active === true ? "true" : itemLeft.active === false ? "false" : ''}">
+                   ${itemLeft?.value}
+              </div>`
+    }).join(' ')} 
+        
+       `;
+  }
+
+  // Tạo html form để đẩy vào thẻ div
+  function RenderFormQuizJoinTextImageRight(dataItem, i) {
+
+    return `  
+    
+        ${dataRight[i]?.map((itemRight) => {
+      console.log("itemRight", itemRight);
+      return `
+               <div class="img-e2">
+                  <img class="img" src=${itemRight?.value} alt="">
+               </div>`
+    }).join(' ')} 
+        
+       `;
+  }
+
+
+  // Tạo html form để đẩy vào thẻ div
+  function RenderFormQuizJoinImageImageLeft(dataItem, i) {
+
+    return `  
+    
+          ${dataLeftRandom[i]?.map((itemLeft) => {
+
+      return `
+               <div draggable="true" class="img-e  ${itemLeft.active === true ? "true" : itemLeft.active === false ? "false" : ''}">
+            <img class="img2" src=${itemLeft?.value} alt="">
+          </div>`
+    }).join(' ')} 
+        
+       `;
+  }
+
+  // Tạo html form để đẩy vào thẻ div
+  function RenderFormQuizJoinImageImageRight(dataItem, i) {
+
+    return `  
+
+          ${dataRight[i]?.map((itemRight) => {
+      return `
+               <div class="img-e">
+            <img class="img" src=${itemRight?.value} alt="">
+          </div>`
+    }).join(' ')} 
+
+        
+       `;
+  }
+  // Tạo html form để đẩy vào thẻ div
+  function RenderFormQuizJoin(i) {
+    return `  <form id="form" action="">
+      <div class="title-question">${dataItem?.ItemInfo[0]?.QuestionQuizJoin?.Value}</div>
+
+
+      <audio class="audio" controls>
+        <source src=${dataItem?.ItemInfo[0]?.QuestionQuizJoin?.MediaUrl} type="audio/mpeg" />
+      </audio>
+      <div class="list-textimg">
+    
+        <div class="wrapper-img">
+          ${dataLeftRandom[i]?.map((itemLeft, indexLeft) => {
+      return `
+         <div draggable="true" class="img-e ${itemLeft?.active === true ? "active" : ""}">
+                   ${itemLeft?.value}
+              </div>`
+
+    }).join(' ')}
+        </div>
+        <div class="wrapper-img2">
+          ${dataRight[i]?.map((itemRight) => {
+      return `
+                <div draggable="true" class="img-e3">
+                   ${itemRight?.value}
+              </div>`
+    }).join(' ')} 
+        </div>
+        
+
+      </div>
+
+
+  </div>
+  <div class="wrapper-check">
+    <button id="check" class="check" idpl= ${dataItem?.Id} >Check</button>
+  </div>
+  </form>`;
+  }
+
   // <div class="wrapper-imgques">
   //   <img src="http://resource.bkt.net.vn/imagesPNG/4.jpg" alt="" />
   // </div>;
@@ -4747,11 +5322,8 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
   let countDaAnHien = -1
 
   function RenderFormAnHien(dataItem, DA_Drop, DA_Hiden, i, arrayHide) {
-    console.log("DA_Drop", DA_Drop);
-    console.log("i", i);
 
 
-    console.log('arrayHide-Length', arrayHide[i].length);
     return `<form id="form" action="">
         <div class="title-question">
         ${dataItem?.ItemInfo[0]?.WhichWord?.Title}
@@ -4764,7 +5336,6 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
       <div class="list-true-false">
           <span class="span-anhien">${item.replace(/xxxx/g, () => {
           if (arrayHide[i].length - countDaAnHien === -1) {
-            console.log("zo")
             countDaAnHien = -1
           }
 
@@ -4789,7 +5360,6 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
   let countDaDienKhuyet = -1
 
   function RenderFormDienKhuyet(dataItem, DA_Drop, DA_Hiden, i, arrayHide) {
-    console.log("arrayHide", arrayHide);
     return `<form id="form" action="" idpl= ${dataItem?.Id} >
         <div class="title-question">
         ${dataItem?.ItemInfo[0]?.WhichWord?.Title}
@@ -4803,10 +5373,8 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
       <div class="list-true-false">
           <span class="span-anhien">${item.replace(/xxxx/g, () => {
           if (arrayHide[i].length - countDaDienKhuyet === -1) {
-            console.log("zo", i)
             countDaDienKhuyet = -1
           }
-          console.log('countDaDienKhuyet', countDaDienKhuyet);
           countDaDienKhuyet++
 
           return `<label class="label-dienkhuyet">
@@ -4823,6 +5391,19 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
   <button id="check" class="check" idpl= ${dataItem?.Id} >Check</button>
 </div>
       </form > `;
+  }
+
+  // Tạo html form để đẩy vào thẻ div
+  function RenderModalImg(srcImg) {
+
+    return `  
+      <div class="modal">
+        <div class="item-close">x</div>
+        <div class="wrapper-img-modal">
+          <img class="img-modal" src=${srcImg} alt="">
+        </div>
+      </div>
+       `;
   }
 
   // Text và nhạc render khi trả lời đúng
@@ -4869,8 +5450,6 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
 
   // So sánh 2 mảng có giống nhau
   function areArraysEqual(arr1, arr2) {
-    console.log("arr1", arr1);
-    console.log("arr2", arr2);
     // Kiểm tra xem hai mảng có cùng độ dài hay không
     if (arr2 !== undefined && arr2.length === 0) {
       return null
