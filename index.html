@@ -35,54 +35,51 @@
     </div>
 
 
-    <!-- <form id="form" action="">
-      <div class="title-question">Find words/ phrases in the box to describle the photos. Then listen to check your
-        answer</div>
+    <!-- <form id="form" action="" idpl=${dataItem?.Id}>
+      <div class="title-question">${dataItem?.ItemInfo[0]?.Question?.Value}</div>
 
 
       <audio class="audio" controls>
         <source src=${dataItem?.ItemInfo[0]?.Question?.MediaUrl} type="audio/mpeg" />
       </audio>
-      <div class="list-img2">
-        <div class="wrapper-img">
-          <div class="img-e">
-            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
-          </div>
-          <div class="img-e">
-            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
-          </div>
-          <div class="img-e">
-            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
-          </div>
-          <div class="img-e">
-            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+      <div class="list-btn-da-ed">
+        <div class="wrapper-img-da">
+          <img class="img-da" src="http://resource.bkt.net.vn/imagesPNG/fish.jpg" alt="">
+          <div class="btn-da-stt">
+            <span class="stt">1</span>
+            <div class="btn-da">sdsd</div>
           </div>
         </div>
-        <div class="wrapper-img">
-          <div class="img-e">
-            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+        <div class="wrapper-img-da">
+          <img class="img-da" src="http://resource.bkt.net.vn/imagesPNG/fish.jpg" alt="">
+          <div class="btn-da-stt">
+            <span class="stt">2</span>
+            <div class="btn-da">sdsd</div>
           </div>
-          <div class="img-e">
-            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
-          </div>
-          <div class="img-e">
-            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
-          </div>
-          <div class="img-e">
-            <img class="img" src="http://resource.bkt.net.vn/imagesPNG/14-2.jpg" alt="">
+        </div>
+        <div class="wrapper-img-da">
+          <img class="img-da" src="http://resource.bkt.net.vn/imagesPNG/fish.jpg" alt="">
+          <div class="btn-da-stt">
+            <span class="stt">3</span>
+            <div class="btn-da">sdsd</div>
           </div>
         </div>
 
       </div>
+      <div class="list-btn-da">
+        ${randomizedText?.split(" ")?.map((item, index) => {
+        return `
+        <button value=${item} id="btn" class="btn-button">${item}</button>
+        `
+
+        })}
 
 
-  </div>
-  <div class="wrapper-check">
-    <button id="check" class="check">Check</button>
-  </div>
-  </form> -->
-
-
+      </div>
+      <div class="wrapper-check">
+        <button id="check" class="check" idpl=${dataItem?.Id}>Check</button>
+      </div>
+    </form> -->
 
     <!--  -->
     <div class="wrapper-button">
