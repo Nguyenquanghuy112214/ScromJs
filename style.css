@@ -142,7 +142,6 @@ li {
 span {
   white-space: nowrap;
   padding: 10px;
-
   border-radius: 8px;
 }
 
@@ -643,6 +642,7 @@ form {
       width: 100%;
       border: 8px solid rgba(137, 43, 226, 0.658);
       border-radius: 4px;
+      cursor: pointer;
     }
 
     .btn-da-stt {
@@ -844,4 +844,10 @@ form {
     }
   }
 
+}
+
+.item-da {
+  background-color: #ce3872;
+  margin: 0 20px;
+  cursor: pointer;
 }
