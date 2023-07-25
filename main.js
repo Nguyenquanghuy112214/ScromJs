@@ -3820,7 +3820,6 @@ const app = () => {
           let ExtendDragInfo = []
           dataItem?.ItemInfo[0]?.Question?.ExtendDragInfo?.map((item, index) => {
             ExtendDragInfo.push(item?.Data)
-            console.log("ExtendDragInfo", ExtendDragInfo);
 
           })
 
@@ -3877,7 +3876,6 @@ const app = () => {
           listarrayQuizoin.push([])
           listarrayQuizoinRight.push([])
           dataItem?.ItemInfo[0]?.Question?.Answers?.map((item, index) => {
-            console.log('item', item);
             dataLeft[i].push({ id: item?.Id, value: item?.Value, answer: "", answerTrue: item?.Answer, active: null })
           })
 
@@ -4553,36 +4551,34 @@ const app = () => {
         event.preventDefault();
         const wrapperCheck = checkBtn.parentNode;
         let isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
-
+        const indexExactly = +checkBtn?.getAttribute("idpl")
         const filteredItemsTrue = dataRight[i].filter((item, index) => item.id === dataLeftRandom[i][index].id)
         const filteredItemsFalse = dataRight[i].filter((item, index) => item.id !== dataLeftRandom[i][index].id)
         filteredItemsTrue.forEach((dataLeft) => {
           const indexTrue = dataLeftRandom[i].findIndex((x => x.id === dataLeft.id))
 
 
-          dataLeftRandom[i].splice(indexTrue, 1, { ...dataLeftRandom[i][indexTrue], active: true })
+          dataLeftRandom[indexExactly].splice(indexTrue, 1, { ...dataLeftRandom[indexExactly][indexTrue], active: true })
 
 
         })
 
         filteredItemsFalse.forEach((dataLeft) => {
           const indexFalse = dataLeftRandom[i].findIndex((x => x.id === dataLeft.id))
-          console.log("indexFalse", indexFalse);
 
-          dataLeftRandom[i].splice(indexFalse, 1, { ...dataLeftRandom[i][indexFalse], active: false })
+          dataLeftRandom[indexExactly].splice(indexFalse, 1, { ...dataLeftRandom[indexExactly][indexFalse], active: false })
 
 
         })
-        console.log("filteredItemsFalse", filteredItemsFalse);
-        count[i].shift();
-        count[i].push(filteredItemsTrue.length);
+        count[indexExactly].shift();
+        count[indexExactly].push(filteredItemsTrue.length);
 
-        if (+count[i] === 0 && isExactly) {
+        if (+count[indexExactly] === 0 && isExactly) {
           answerFail(spanElementDetail)
         }
-        else if (count[i].length > 0 && isExactly) {
+        else if (count[indexExactly].length > 0 && isExactly) {
 
-          answerSuccess(spanElementDetail, true, count[i], dataRight[i]?.length)
+          answerSuccess(spanElementDetail, true, count[indexExactly], dataRight[indexExactly]?.length)
         }
 
 
@@ -4696,6 +4692,7 @@ const app = () => {
       checkBtn.addEventListener("click", function (event) {
         event.preventDefault();
         const wrapperCheck = checkBtn.parentNode;
+        const indexExactly = +checkBtn?.getAttribute("idpl")
         let isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
 
         const filteredItemsTrue = dataRight[i].filter((item, index) => item.id === dataLeftRandom[i][index].id)
@@ -4704,28 +4701,27 @@ const app = () => {
           const indexTrue = dataLeftRandom[i].findIndex((x => x.id === dataLeft.id))
 
 
-          dataLeftRandom[i].splice(indexTrue, 1, { ...dataLeftRandom[i][indexTrue], active: true })
+          dataLeftRandom[indexExactly].splice(indexTrue, 1, { ...dataLeftRandom[indexExactly][indexTrue], active: true })
 
 
         })
 
         filteredItemsFalse.forEach((dataLeft) => {
           const indexFalse = dataLeftRandom[i].findIndex((x => x.id === dataLeft.id))
-          console.log("indexFalse", indexFalse);
 
-          dataLeftRandom[i].splice(indexFalse, 1, { ...dataLeftRandom[i][indexFalse], active: false })
+          dataLeftRandom[indexExactly].splice(indexFalse, 1, { ...dataLeftRandom[indexExactly][indexFalse], active: false })
 
 
         })
-        count[i].shift();
-        count[i].push(filteredItemsTrue.length);
+        count[indexExactly].shift();
+        count[indexExactly].push(filteredItemsTrue.length);
 
-        if (+count[i] === 0 && isExactly) {
+        if (+count[indexExactly] === 0 && isExactly) {
           answerFail(spanElementDetail)
         }
-        else if (count[i].length > 0 && isExactly) {
+        else if (count[indexExactly].length > 0 && isExactly) {
 
-          answerSuccess(spanElementDetail, true, count[i], dataRight[i]?.length)
+          answerSuccess(spanElementDetail, true, count[indexExactly], dataRight[indexExactly]?.length)
         }
 
 
@@ -4757,7 +4753,6 @@ const app = () => {
 
   // iQuizJoinImageImageLeft Right
   function iQuizJoinImageImageLeft(intermediary, dataItem, i, containerElement) {
-    console.log("test", containerElement);
     intermediary.querySelector(".wrapper-img").innerHTML = RenderFormQuizJoinImageImageLeft(dataItem, i);
     handleZoomImg(intermediary, containerElement)
 
@@ -4804,14 +4799,11 @@ const app = () => {
     listImg3.forEach((img) => {
       img.addEventListener("dblclick", function (event) {
         const srcImg = event?.target?.src;
-        console.log("containerElement", containerElement);
 
-        console.log("div", div);
         div.innerHTML = RenderModalImg(srcImg)
         containerElement.appendChild(div)
         const listClose = div.querySelector(".item-close")
         listClose.addEventListener('click', function () {
-          console.log("sdsd", div.querySelector(".modal"));
           containerElement.removeChild(div)
         })
       })
@@ -4996,7 +4988,7 @@ const app = () => {
 
     listTG[i][0].addEventListener('dragstart', (event) => handleDragStart(event, "left"));
     listTG[i][0].addEventListener('dragover', (event) => {
-      if ("btn-da" === event?.target?.classList.value || "btn-button" === event?.target?.classList.value) {
+      if ("btn-da " === event?.target?.classList.value || "btn-da" === event?.target?.classList.value || "btn-button" === event?.target?.classList.value || "btn-da activeAnswer" === event?.target?.classList.value || "btn-da noactiveAnswer" === event?.target?.classList.value) {
         handleDragOver(event, "left")
 
       }
@@ -5025,7 +5017,6 @@ const app = () => {
     }
     function handleDrop(event, location) {
       event.preventDefault();
-      console.log("event", event?.target?.classList.value);
 
       if (location === "left") {
         dragEndIndex = { type: 'left', value: Array.from(listTG[i][0].children).indexOf(event.target?.parentNode?.parentNode) };
@@ -5060,6 +5051,7 @@ const app = () => {
         }
         else {
           if (dataRightRandom[i][dragStartIndex.value] !== undefined && dataRightRandom[i][dragEndIndex.value] !== undefined) {
+
             let temp = dataRightRandom[i][dragStartIndex.value];
             dataRightRandom[i][dragStartIndex.value] = dataRightRandom[i][dragEndIndex.value];
             dataRightRandom[i][dragEndIndex.value] = temp;
@@ -5103,17 +5095,20 @@ const app = () => {
         event.preventDefault();
         countTrue = 0
         const wrapperCheck = checkBtn.parentNode;
-        console.log("wrapperCheck", wrapperCheck);
         const parentNode = wrapperCheck?.parentNode?.querySelector(".list-btn-da-ed").querySelectorAll(".wrapper-img-da")
-        parentNode?.forEach((item) => {
+        parentNode?.forEach((item, index) => {
           const itemSS = item.querySelector(".btn-da")
-
+          const indexExactly = +checkBtn?.getAttribute("idpl")
           const value = itemSS?.getAttribute("value");
           const textHTML = itemSS.innerText;
 
-          if (value === textHTML) {
+          console.log("i", +checkBtn?.getAttribute("idpl"));
+          if (value === textHTML && itemSS !== null) {
             countTrue += 1
-            console.log("countTrue", countTrue);
+            dataLeftRandom[indexExactly].splice(index, 1, { ...dataLeftRandom[indexExactly][index], activeAnswer: true })
+          }
+          else {
+            dataLeftRandom[indexExactly].splice(index, 1, { ...dataLeftRandom[indexExactly][index], activeAnswer: false })
           }
         })
         let isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
@@ -5640,19 +5635,16 @@ const app = () => {
           if (+dataLeft[i][dragStartIndex.value].answer === 0 && +dataRightRandom[i][dragEndIndex.value].answer?.length > 0) {
             dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataRightRandom[i][dragEndIndex.value].answer, active: true };
             dataRightRandom[i][dragEndIndex.value] = { ...dataRightRandom[i][dragEndIndex.value], answer: temp?.answer, active: false };
-            console.log("1");
 
           }
           else if (+dataRightRandom[i][dragEndIndex.value].answer === 0 && +dataLeft[i][dragStartIndex.value].answer.length > 0) {
             dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataRightRandom[i][dragEndIndex.value].answer, active: false };
             dataRightRandom[i][dragEndIndex.value] = { ...dataRightRandom[i][dragEndIndex.value], answer: temp?.answer, active: true };
-            console.log("2");
 
           }
           else if (dataRightRandom[i][dragEndIndex.value].answer.length > 0 && +dataLeft[i][dragStartIndex.value].answer.length > 0) {
             dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataRightRandom[i][dragEndIndex.value].answer, active: true };
             dataRightRandom[i][dragEndIndex.value] = { ...dataRightRandom[i][dragEndIndex.value], answer: temp?.answer, active: true };
-            console.log("3");
 
           }
           iKeoThaLeft(intermediary, dataItem, i, containerElement)
@@ -5700,16 +5692,11 @@ const app = () => {
         event.preventDefault();
         countTrue = 0
         const wrapperCheck = checkBtn.parentNode;
-        console.log("wrapperCheck", wrapperCheck);
         const parentNode = wrapperCheck?.parentNode?.querySelector(".wrapper__list-true-false").querySelectorAll(".list-true-false")
-        console.log("parentNode", parentNode);
         parentNode?.forEach((item, index) => {
           const itemSS = item.querySelector(".input")
-          console.log('itemSS', itemSS);
           const valueInit = itemSS?.getAttribute("valueinit");
           const value = itemSS?.value;
-          console.log("value", value);
-          console.log("valueInit", valueInit);
 
           if (value === valueInit && itemSS !== null) {
             countTrue += 1
@@ -5717,7 +5704,6 @@ const app = () => {
           }
           else {
             dataLeft[i].splice(index, 1, { ...dataLeft[i][index], activeAnswer: false })
-            console.log("dataLeft", dataLeft);
           }
         })
         let isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
@@ -5770,7 +5756,6 @@ const app = () => {
 
             // Nếu có từ bị ẩn thì hiển thị input checkbox
             if (countDaKeoTha !== -1) {
-              // console.log(arrayHide[i][countDaKeoTha]);
               return `<label class="label-dienkhuyet">
             <input class="input ${item.active === true ? "true" : "false"} ${item?.activeAnswer === true ? "activeAnswer" : "noactiveAnswer"}" draggable="true" readonly type="text" valueInit=${arrayHide[i][countDaKeoTha]} value=${item.answer} >
           </label> `;
@@ -5836,7 +5821,6 @@ const app = () => {
 
             // Nếu có từ bị ẩn thì hiển thị input checkbox
             if (countDaKeoTha !== -1) {
-              // console.log(arrayHide[i][countDaKeoTha]);
               return `<label  class="label-dienkhuyet">
             <input class="input" draggable="true" readonly type="text" valueInit=${arrayHide[i][countDaKeoTha]} value=${item.answer} >
           </label > `;
@@ -6183,42 +6167,47 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
 
   // Tạo html form để đẩy vào thẻ divsđsd
   function RenderFormKeoThaImageContent(dataItem, i) {
-    console.log("dataItem", dataItem);
     return `
     <form id="form" action="" idpl=${dataItem?.Id}>
-      <div class="title-question">${dataItem?.ItemInfo[0]?.Question?.Value}</div>
+      <div class="title-question">${dataItem?.ItemInfo[0]?.Question?.Value
+      }</div>
 
 
       <audio class="audio" controls>
-        <source src=${dataItem?.ItemInfo[0]?.Question?.MediaUrl} type="audio/mpeg" />
+        <source src=${dataItem?.ItemInfo[0]?.Question?.MediaUrl
+      } type="audio/mpeg" />
       </audio>
       <div class="list-btn-da-ed">
        
-        ${dataLeftRandom[i]?.map((dataLeft, indexLeft) => {
-      console.log("indexLeft", indexLeft);
-      return `
+        ${dataLeftRandom[i]
+        ?.map((dataLeft, indexLeft) => {
+          return `
             <div class="wrapper-img-da">
           <img draggable="false" class="img-da" src=${dataLeft.value} alt="">
           <div class="btn-da-stt">
             <span class="stt">${indexLeft + 1}</span>
-            <div value=${dataLeft?.answerTrue} draggable="true" class="btn-da"></div>
+            <div value=${dataLeft?.answerTrue
+            } draggable="true" class="btn-da"></div>
           </div>
         </div>
-          `
-    }).join(" ")}
+          `;
+        })
+        .join(" ")}
       
        </div >
   <div class="list-btn-da">
-    ${dataRightRandom[i]?.map((item, index) => {
-      return `
+    ${dataRightRandom[i]
+        ?.map((item, index) => {
+          return `
         <div  draggable="true" value=${item.value} id="btn" class="btn-button">${item.value}</div>
-        `
-
-    }).join(" ")}
-
+        `;
+        })
+        .join(" ")}
 
   </div>
       <div class="wrapper-check">
+      <button id="refreshBtnKeoThaImageContent" class="refreshBtnKeoThaImageContent" idpl=${dataItem?.Id
+      }>Refresh</button>
         <button id="check" class="check" idpl=${dataItem?.Id}>Check</button>
       </div>
     </form>
@@ -6226,15 +6215,17 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
   }
 
   function RenderFormKeoThaImageContentLeft(i) {
+
     return `
         ${dataLeftRandom[i]?.map((dataLeft, indexLeft) => {
+      console.log("dataLeft", dataLeft);
 
       return `
             <div class="wrapper-img-da">
           <img draggable="false" class="img-da" src=${dataLeft.value} alt="">
           <div class="btn-da-stt">
             <span class="stt">${indexLeft + 1}</span>
-            <div value=${dataLeft.answerTrue} draggable="true" class="btn-da">${dataLeft?.answer}</div>
+            <div value=${dataLeft.answerTrue} draggable="true" class="btn-da ${dataLeft.activeAnswer === true ? "activeAnswer" : dataLeft.activeAnswer === false ? "noactiveAnswer" : ''}">${dataLeft?.answer}</div>
           </div>
         </div>
           `
@@ -6244,7 +6235,6 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
     `
   }
   function RenderFormKeoThaImageContentRight(i) {
-    console.log('dataRightRandom', dataRightRandom);
     return `
  
     ${dataRightRandom[i]?.map((item, index) => {
@@ -6266,9 +6256,9 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
     
        
           ${dataLeftRandom[i]?.map((itemLeft) => {
-      console.log("itemLeft", itemLeft);
+      console.log("dataLeftRandom", dataLeftRandom);
       return `
-               <div draggable="true" class="img-e ${itemLeft.active === true ? "true" : itemLeft.active === false ? "false" : ''}">
+               <div draggable="true" class="img-e ${(itemLeft.active === true && itemLeft.active !== undefined) ? "true" : itemLeft.active === false ? "false" : ''}">
                    ${itemLeft?.value}
               </div>`
     }).join(' ')} 
@@ -6282,7 +6272,6 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
     return `  
     
         ${dataRight[i]?.map((itemRight) => {
-      console.log("itemRight", itemRight);
       return `
                <div class="img-e2">
                   <img class="img" src=${itemRight?.value} alt="">
@@ -6419,7 +6408,6 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
 
             // Nếu có từ bị ẩn thì hiển thị input checkbox
             if (countDaAnHien !== -1) {
-              console.log(arrayHide[i][countDaAnHien]);
               return `<label class="label-anhien">
               <input hidden class="input" type="checkbox" value=${arrayHide[i][countDaAnHien]} />
               <span>Mở</span>

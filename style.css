@@ -684,6 +684,14 @@ form {
         padding: 10px;
         border-radius: 3px;
         color: white;
+
+        &.noactiveAnswer {
+          background-color: #a31919;
+        }
+
+        &.activeAnswer {
+          background-color: #016e35;
+        }
       }
     }
 
