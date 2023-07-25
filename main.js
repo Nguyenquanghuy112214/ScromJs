@@ -1494,7 +1494,48 @@ const fakeData = [
             Type: "module",
             X: 76.7319911337368,
             Y: 70.675607485238,
-            Width: 679.944325221659,
+            Width: 579.944325221659,
+            Height: 383.880732911668,
+            ScaleX: 1.0,
+            ScaleY: 1.0,
+            Rotation: 0,
+            ItemInfo: [
+              {
+                WhichWord: {
+                  Title: "Fill&nbsp;in&nbsp;the&nbsp;blank.",
+                  Image: null,
+                  DapAn: "24,32|62,66|78,81|114,123|161,169",
+                  Drag_Drop:
+                    "Miss&nbsp;Hoa:&nbsp;Good&nbsp;morning,&nbsp;children\r\nChildren:&nbsp;Good&nbsp;morning,&nbsp;Miss&nbsp;Hoa\r\nMiss&nbsp;Hoa:&nbsp;How&nbsp;are&nbsp;you?\r\nChildren:&nbsp;We're&nbsp;fine,&nbsp;thank&nbsp;you.&nbsp;How&nbsp;are&nbsp;you?\r\nMiss&nbsp;Hoa:&nbsp;Fine&nbsp;thank.&nbsp;Good&nbsp;bye.\r\nChildren:&nbsp;Bye",
+                  MediaType: "image",
+                  MediaUrl: "",
+                  extend_Drags: [],
+                },
+              },
+            ],
+            Appear: {
+              Id: "NoID",
+              Name: "None",
+              Direction: "None",
+              Start: "Auto",
+              Speed: "0",
+              Repeat: "false",
+              Index: 1,
+              isAction: false,
+            },
+            Link: null,
+            Speech: { Value: "", IsMale: true },
+            Audio: null,
+            IsRemoved: false,
+            IsActived: false,
+          },
+          {
+            Id: "1",
+            Name: "iKeoTha",
+            Type: "module",
+            X: 1086.7319911337368,
+            Y: 70.675607485238,
+            Width: 479.944325221659,
             Height: 383.880732911668,
             ScaleX: 1.0,
             ScaleY: 1.0,
@@ -3317,9 +3358,11 @@ const app = () => {
   let listarrayQuizoinTextImage = []
   let listarrayQuizoinTextImageRight = []
 
-  let listarrayForm = []
   let listarrayQuizoin = []
   let listarrayQuizoinRight = []
+
+  let listarrayKeoTha = []
+  let listarrayKeoThaRight = []
 
   // var i
   function Loading() {
@@ -3402,6 +3445,8 @@ const app = () => {
     listarrayQuizoinTextImageRight = []
     listarrayQuizoin = []
     listarrayQuizoinRight = []
+    listarrayKeoTha = []
+    listarrayKeoThaRight = []
     dataLeft = []
     dataLeftRandom = []
     dataRightRandom = []
@@ -3602,8 +3647,12 @@ const app = () => {
           DA_Hiden.push([]);
           DA_Drop.push([]);
           arrayHide.push([]);
+          dataLeft.push([])
           dataRight.push([])
+          dataLeftRandom.push([])
           dataRightRandom.push([])
+          listarrayKeoTha.push([])
+          listarrayKeoThaRight.push([])
           function replaceSubstringInRange(arr, str) {
             let tempStr = str; // Biến tạm để lưu trữ chuỗi thay thế
             let offset = 0; // Biến để tính toán sự thay đổi độ dài
@@ -3639,7 +3688,6 @@ const app = () => {
 
               let substringToReplace = str.substring(start, end); // Chuỗi con cần thay thế
               arrayHide[i].push(substringToReplace);
-              console.log("arrayHide2", arrayHide);
 
             });
 
@@ -3654,16 +3702,18 @@ const app = () => {
           let replacedString = replaceSubstringInRange(da, dataorigin);
           DA_Drop[i].push(...drop);
           DA_Hiden[i].push(...replacedString);
-          console.log("arrayHide", arrayHide);
-          // arrayHide
+
           arrayHide[i]?.forEach((item, index) => {
 
-            dataRight[i].push({ value: item })
+            dataRight[i].push({ value: item, answer: item })
+          })
+          DA_Hiden[i]?.forEach((item, index) => {
+
+            dataLeft[i].push({ value: item, answer: " " })
           })
           let randomizedTextRight = randomizeText(dataRight[i]);
           dataRightRandom[i].push(...randomizedTextRight)
-          console.log("dataRightRandom", dataRightRandom);
-          iDragAndDrop(intermediary, dataItem, DA_Drop, DA_Hiden, i, arrayHide);
+          iKeoTha(intermediary, dataItem, DA_Drop, DA_Hiden, i, arrayHide, containerElement);
         }
         else if (dataItem?.Name === "iDienKhuyet") {
           DA_Hiden.push([])
@@ -4667,7 +4717,6 @@ const app = () => {
 
 
         })
-        console.log("filteredItemsFalse", filteredItemsFalse);
         count[i].shift();
         count[i].push(filteredItemsTrue.length);
 
@@ -4723,12 +4772,9 @@ const app = () => {
 
   // handleClick Zoom
   function handleZoomImg(intermediary, containerElement) {
-    console.log("zo");
     let listImg = intermediary.querySelectorAll(".img")
     let listImg2 = intermediary.querySelectorAll(".img-da")
     let listImg3 = intermediary.querySelectorAll(".img2")
-    console.log("listImg", listImg);
-    console.log("listImg2", listImg2);
 
     const div = document.createElement("div")
     listImg.forEach((img) => {
@@ -4935,7 +4981,6 @@ const app = () => {
   //
   // iKeoThaImageContent
   function iKeoThaImageContent(intermediary, dataItem, i, containerElement) {
-    // let count = [];
     listTG = JSON.parse(JSON.stringify(listarrayQuizoin))
     listTGRight = JSON.parse(JSON.stringify(listarrayQuizoinRight))
 
@@ -4943,7 +4988,6 @@ const app = () => {
 
     let listForm = document.querySelectorAll('#form')
     listForm.forEach((form, index) => {
-      // count.push([])
       listTG[index].push(form.querySelector('.list-btn-da-ed'))
       listTGRight[index].push(form.querySelector('.list-btn-da'))
 
@@ -5475,46 +5519,249 @@ const app = () => {
     })
 
   }
-  function iDragAndDrop(
+  function iKeoTha(
     intermediary,
     dataItem,
     DA_Drop,
     DA_Hiden,
     i,
-    arrayHide
+    arrayHide, containerElement
   ) {
+    listTG = JSON.parse(JSON.stringify(listarrayKeoTha))
+    listTGRight = JSON.parse(JSON.stringify(listarrayKeoThaRight))
+
     intermediary.innerHTML = RenderFormKeoThaTu(
-      intermediary,
       dataItem,
       DA_Drop,
       DA_Hiden,
       i,
       arrayHide
     );
+
+    let listForm = document.querySelectorAll('#form')
+
+    listForm.forEach((form, index) => {
+
+      listTG[index].push(form.querySelector('.wrapper__list-true-false'))
+      listTGRight[index].push(form.querySelector('.list-choose-da'))
+    })
+
+    listTG[i][0].addEventListener('dragstart', (event) => handleDragStart(event, "left"));
+    listTG[i][0].addEventListener('dragover', (event) => {
+
+      if ("input false noactiveAnswer" === event?.target?.classList.value || "input true noactiveAnswer" === event?.target?.classList.value || "input true activeAnswer" === event?.target?.classList.value || "input false activeAnswer" === event?.target?.classList.value || "input" === event?.target?.classList.value || "input true" === event?.target?.classList.value || "input false" === event?.target?.classList.value || "item-da" === event?.target?.classList.value || "item-da true" === event?.target?.classList.value || "item-da false" === event?.target?.classList.value) {
+        handleDragOver(event, "left")
+
+      }
+    });
+    listTG[i][0].addEventListener('drop', (event) => handleDrop(event, "left"));
+
+    listTGRight[i][0].addEventListener('dragstart', (event) => handleDragStart(event, "right"));
+    listTGRight[i][0].addEventListener('dragover', (event) => handleDragOver(event, "right"));
+    listTGRight[i][0].addEventListener('drop', (event) => handleDrop(event, "right"));
+
+    let dragStartIndex;
+    let dragEndIndex;
+    function handleDragStart(event, location) {
+      if (location === "left") {
+        dragStartIndex = { type: 'left', value: Array.from(listTG[i][0].children).indexOf(event?.target?.parentNode?.parentNode?.parentNode) };
+
+      }
+      else {
+        dragStartIndex = { type: 'right', value: Array.from(listTGRight[i][0].children).indexOf(event.target) }
+      }
+
+    }
+    function handleDragOver(event, location) {
+      event.preventDefault();
+
+    }
+    function handleDrop(event, location) {
+      event.preventDefault();
+
+      if (location === "left") {
+        dragEndIndex = { type: 'left', value: Array.from(listTG[i][0].children).indexOf(event.target?.parentNode?.parentNode?.parentNode) };
+        swapItems(dragStartIndex, dragEndIndex, "left");
+
+
+      }
+      else {
+        dragEndIndex = { type: 'right', value: Array.from(listTGRight[i][0].children).indexOf(event.target) }
+        swapItems(dragStartIndex, dragEndIndex, "right");
+
+
+      }
+
+
+    }
+
+    function swapItems(dragStartIndex, dragEndIndex, location) {
+      if (dragStartIndex.type === dragEndIndex.type) {
+
+        if (location === "left") {
+
+          let temp = dataLeft[i][dragStartIndex.value];
+          if (+dataLeft[i][dragStartIndex.value].answer === 0 && dataLeft[i][dragEndIndex.value].answer.length > 0 && +dataLeft[i][dragEndIndex.value].answer !== 0) {
+            dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataLeft[i][dragEndIndex.value].answer, active: true };
+            dataLeft[i][dragEndIndex.value] = { ...dataLeft[i][dragEndIndex.value], answer: temp.answer, active: false };
+
+          }
+          else if (+dataLeft[i][dragEndIndex.value].answer === 0 && +dataLeft[i][dragStartIndex.value].answer.length > 0 && +dataLeft[i][dragStartIndex.value].answer !== 0) {
+            dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataLeft[i][dragEndIndex.value].answer, active: false };
+            dataLeft[i][dragEndIndex.value] = { ...dataLeft[i][dragEndIndex.value], answer: temp.answer, active: true };
+
+          }
+          else if (+dataLeft[i][dragStartIndex.value].answer.length > 0 && +dataLeft[i][dragEndIndex.value].answer.length > 0 && +dataLeft[i][dragEndIndex.value].answer !== 0) {
+            dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataLeft[i][dragEndIndex.value].answer, active: true };
+            dataLeft[i][dragEndIndex.value] = { ...dataLeft[i][dragEndIndex.value], answer: temp.answer, active: true };
+
+          }
+          else if (+dataLeft[i][dragStartIndex.value].answer === 0 && +dataLeft[i][dragEndIndex.value].answer === 0) {
+            dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataLeft[i][dragEndIndex.value].answer, active: false };
+            dataLeft[i][dragEndIndex.value] = { ...dataLeft[i][dragEndIndex.value], answer: temp.answer, active: false };
+          }
+
+          iKeoThaLeft(intermediary, dataItem, i, containerElement)
+        }
+        else {
+          if (dataRightRandom[i][dragStartIndex.value] !== undefined && dataRightRandom[i][dragEndIndex.value] !== undefined) {
+            let temp = dataRightRandom[i][dragStartIndex.value];
+            dataRightRandom[i][dragStartIndex.value] = dataRightRandom[i][dragEndIndex.value];
+            dataRightRandom[i][dragEndIndex.value] = temp;
+
+            iKeoThaRight(intermediary, dataItem, i, containerElement)
+          }
+        }
+      }
+      else {
+        if (dragStartIndex.type === "left") {
+          let temp = dataLeft[i][dragStartIndex.value];
+
+          if (+dataLeft[i][dragStartIndex.value].answer === 0 && +dataRightRandom[i][dragEndIndex.value].answer?.length > 0) {
+            dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataRightRandom[i][dragEndIndex.value].answer, active: true };
+            dataRightRandom[i][dragEndIndex.value] = { ...dataRightRandom[i][dragEndIndex.value], answer: temp?.answer, active: false };
+            console.log("1");
+
+          }
+          else if (+dataRightRandom[i][dragEndIndex.value].answer === 0 && +dataLeft[i][dragStartIndex.value].answer.length > 0) {
+            dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataRightRandom[i][dragEndIndex.value].answer, active: false };
+            dataRightRandom[i][dragEndIndex.value] = { ...dataRightRandom[i][dragEndIndex.value], answer: temp?.answer, active: true };
+            console.log("2");
+
+          }
+          else if (dataRightRandom[i][dragEndIndex.value].answer.length > 0 && +dataLeft[i][dragStartIndex.value].answer.length > 0) {
+            dataLeft[i][dragStartIndex.value] = { ...dataLeft[i][dragStartIndex.value], answer: dataRightRandom[i][dragEndIndex.value].answer, active: true };
+            dataRightRandom[i][dragEndIndex.value] = { ...dataRightRandom[i][dragEndIndex.value], answer: temp?.answer, active: true };
+            console.log("3");
+
+          }
+          iKeoThaLeft(intermediary, dataItem, i, containerElement)
+          iKeoThaRight(intermediary, dataItem, i, containerElement)
+
+        }
+        else {
+          let temp = dataRightRandom[i][dragStartIndex.value];
+          if (+dataRightRandom[i][dragStartIndex.value].answer.length > 0 && +dataLeft[i][dragEndIndex.value].answer === 0) {
+            dataRightRandom[i][dragStartIndex.value] = { ...dataRightRandom[i][dragStartIndex.value], answer: dataLeft[i][dragEndIndex.value]?.answer, active: false };
+            dataLeft[i][dragEndIndex.value] = { ...dataLeft[i][dragEndIndex.value], answer: temp?.answer, active: true };
+          }
+          else if (
+            +dataRightRandom[i][dragStartIndex.value].answer === 0 && +dataLeft[i][dragEndIndex.value].answer.length > 0
+          ) {
+            dataRightRandom[i][dragStartIndex.value] = { ...dataRightRandom[i][dragStartIndex.value], answer: dataLeft[i][dragEndIndex.value]?.answer, active: true };
+            dataLeft[i][dragEndIndex.value] = { ...dataLeft[i][dragEndIndex.value], answer: temp?.answer, active: false };
+
+          }
+          else if (
+            dataRightRandom[i][dragStartIndex.value].answer.length > 0 && +dataLeft[i][dragEndIndex.value].answer.length > 0
+          ) {
+            dataRightRandom[i][dragStartIndex.value] = { ...dataRightRandom[i][dragStartIndex.value], answer: dataLeft[i][dragEndIndex.value]?.answer, active: true };
+            dataLeft[i][dragEndIndex.value] = { ...dataLeft[i][dragEndIndex.value], answer: temp?.answer, active: true };
+
+          }
+
+          iKeoThaLeft(intermediary, dataItem, i, containerElement)
+          iKeoThaRight(intermediary, dataItem, i, containerElement)
+
+        }
+      }
+    }
+
+    // handleClick Zoom
+
+
+    // handle btnCheck
+    let countTrue = 0
+    const listCheckBtn = document.querySelectorAll("#check");
+    const spanElementDetail = document.createElement("span");
+    listCheckBtn.forEach((checkBtn, index) => {
+      spanElementDetail.setAttribute("idpl", checkBtn?.getAttribute("idpl"))
+      checkBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        countTrue = 0
+        const wrapperCheck = checkBtn.parentNode;
+        console.log("wrapperCheck", wrapperCheck);
+        const parentNode = wrapperCheck?.parentNode?.querySelector(".wrapper__list-true-false").querySelectorAll(".list-true-false")
+        console.log("parentNode", parentNode);
+        parentNode?.forEach((item, index) => {
+          const itemSS = item.querySelector(".input")
+          console.log('itemSS', itemSS);
+          const valueInit = itemSS?.getAttribute("valueinit");
+          const value = itemSS?.value;
+          console.log("value", value);
+          console.log("valueInit", valueInit);
+
+          if (value === valueInit && itemSS !== null) {
+            countTrue += 1
+            dataLeft[i].splice(index, 1, { ...dataLeft[i][index], activeAnswer: true })
+          }
+          else {
+            dataLeft[i].splice(index, 1, { ...dataLeft[i][index], activeAnswer: false })
+            console.log("dataLeft", dataLeft);
+          }
+        })
+        let isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
+
+        if (+countTrue === 0 && isExactly) {
+          answerFail(spanElementDetail)
+        }
+        else if (countTrue > 0 && isExactly) {
+
+          answerSuccess(spanElementDetail, true, countTrue, dataLeft[i]?.length)
+        }
+
+
+        if (isExactly) {
+          wrapperCheck.insertBefore(spanElementDetail, checkBtn);
+          iKeoThaLeft(intermediary, dataItem, i, containerElement)
+          iKeoThaRight(intermediary, dataItem, i, containerElement)
+        }
+
+      });
+    })
+  }
+
+  // iKeoThaImageContentLeft Right
+  function iKeoThaLeft(intermediary, dataItem, i, containerElement) {
+    intermediary.querySelector(".wrapper__list-true-false").innerHTML = RenderFormKeoThaLeft(i);
+
+
+  }
+  function iKeoThaRight(intermediary, dataItem, i, containerElement) {
+    intermediary.querySelector(".list-choose-da").innerHTML = RenderFormKeoThaRight(i);
+
   }
 
 
-  // kéo thả từ
-  function RenderFormKeoThaTu(intermediary,
-    dataItem,
-    DA_Drop,
-    DA_Hiden,
-    i,
-    arrayHide) {
+  function RenderFormKeoThaLeft(i) {
     let countDaKeoTha = -1;
-    console.log("arrayHide[i][countDaKeoTha]", arrayHide);
-
-    return `<form id="form" action="" idpl= ${dataItem?.Id} >
-        <div class="title-question">
-        ${dataItem?.ItemInfo[0]?.WhichWord?.Title}
-        </div>
-
-   ${DA_Hiden[i]
+    return `
+          ${dataLeft[i]
         ?.map((item, index) => {
           return `
    
       <div class="list-true-false">
-          <span class="span-anhien">${item.replace(/xxxx/g, () => {
+          <span class="span-anhien">${item.value.replace(/xxxx/g, () => {
             countDaKeoTha++;
             // Nếu đã hết các từ bị ẩn thì reset về -1
             if (countDaKeoTha >= arrayHide[i].length) {
@@ -5525,7 +5772,73 @@ const app = () => {
             if (countDaKeoTha !== -1) {
               // console.log(arrayHide[i][countDaKeoTha]);
               return `<label class="label-dienkhuyet">
-            <input  class="input input-drag-drop"   draggable="true" readonly type="text" valueInit=${arrayHide[i][countDaKeoTha]} idpl= ${dataItem?.Id}   />
+            <input class="input ${item.active === true ? "true" : "false"} ${item?.activeAnswer === true ? "activeAnswer" : "noactiveAnswer"}" draggable="true" readonly type="text" valueInit=${arrayHide[i][countDaKeoTha]} value=${item.answer} >
+          </label> `;
+            }
+
+            // Nếu không có từ bị ẩn, trả về chuỗi gốc (không hiển thị input checkbox)
+            return item;
+          })}
+          </span>
+   
+      </div>
+   `;
+        })
+        .join("")}
+      
+      
+    `
+  }
+  function RenderFormKeoThaRight(i) {
+    return `
+     ${dataRightRandom[i]
+        ?.map((item, index) => {
+          return `
+        <span class="item-da ${item.active === false ? "false" : "true"}"  draggable="true"  >
+        ${item?.answer}
+        </span>
+      `;
+        })
+        .join("")}
+      
+      
+    `
+  }
+
+
+  // kéo thả từ
+  function RenderFormKeoThaTu(
+    dataItem,
+    DA_Drop,
+    DA_Hiden,
+    i,
+    arrayHide) {
+    let countDaKeoTha = -1;
+
+    return `<form id="form" action="" idpl= ${dataItem?.Id} >
+        <div class="title-question">
+        ${dataItem?.ItemInfo[0]?.WhichWord?.Title}
+        </div>
+
+        <div class="wrapper__list-true-false">
+          ${dataLeft[i]
+        ?.map((item, index) => {
+
+          return `
+   
+      <div class="list-true-false">
+          <span class="span-anhien">${item.value.replace(/xxxx/g, () => {
+            countDaKeoTha++;
+            // Nếu đã hết các từ bị ẩn thì reset về -1
+            if (countDaKeoTha >= arrayHide[i].length) {
+              countDaKeoTha = -1;
+            }
+
+            // Nếu có từ bị ẩn thì hiển thị input checkbox
+            if (countDaKeoTha !== -1) {
+              // console.log(arrayHide[i][countDaKeoTha]);
+              return `<label  class="label-dienkhuyet">
+            <input class="input" draggable="true" readonly type="text" valueInit=${arrayHide[i][countDaKeoTha]} value=${item.answer} >
           </label > `;
             }
 
@@ -5538,12 +5851,14 @@ const app = () => {
    `;
         })
         .join("")}
+        </div>
+ 
 
      <div class="list-choose-da">
      ${dataRightRandom[i]
         ?.map((item, index) => {
           return `
-        <span class="item-da" id="${item}" draggable="true"  idpl= ${dataItem?.Id}>
+        <span class="item-da" draggable="true" >
         ${item?.value}
         </span>
       `;

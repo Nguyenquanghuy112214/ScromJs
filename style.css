@@ -547,6 +547,7 @@ form {
     .input {
       margin-right: 4px;
     }
+
   }
 
   .span {
@@ -611,6 +612,21 @@ form {
     padding: 10px;
     border-radius: 8px;
     background-color: #f7dfdf;
+    cursor: pointer;
+
+    &.true {
+      background-color: #ce3872;
+      color: white;
+      font-weight: bold;
+    }
+
+    &.activeAnswer {
+      background-color: #016e35;
+    }
+
+    &.noactiveAnswer {
+      background-color: red;
+    }
   }
 }
 
@@ -850,4 +866,23 @@ form {
   background-color: #ce3872;
   margin: 0 20px;
   cursor: pointer;
+  min-width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+
+  &.false {
+    background-color: white;
+  }
+}
+
+.list-choose-da {
+  display: flex;
+}
+
+.wrapper__list-true-false {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
 }
