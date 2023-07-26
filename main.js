@@ -5,99 +5,6 @@ const fakeData = [
     Pages: [
       {
         Id: "0",
-        Title: "I.1&nbsp;Mô&nbsp;tả&nbsp;bài&nbsp;toán",
-        BackgroundImage: "./asset/img/bg1.jpg",
-        BackgroundColor: 0,
-        BackgroundAlpha: 0,
-        Items: [
-          {
-            Id: "0",
-            Name: "iTextBlock",
-            Type: "component",
-            X: 141.049445005045,
-            Y: 60.78708375378411,
-            Width: 400.0,
-            Height: 60.0,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                LeftMargin: 0,
-                Bullet: false,
-                Text: "Mô&nbsp;tả&nbsp;bài&nbsp;toán\r\n",
-                Font: "Arial",
-                Size: 36,
-                Leading: 0,
-                Color: -663885,
-                Align: "left",
-                Bold: true,
-                Italic: false,
-                Underline: false,
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "None",
-              Start: "Auto",
-              Speed: "0",
-              Repeat: "false",
-              Index: 1,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-          {
-            Id: "1",
-            Name: "iTextBlock",
-            Type: "component",
-            X: 156.122479363451,
-            Y: 304.187689202825,
-            Width: 400.0,
-            Height: 60.0,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                LeftMargin: 0,
-                Bullet: false,
-                Text: "hello&nbsp;how&nbsp;are&nbsp;you\r\n",
-                Font: "Arial",
-                Size: 36,
-                Leading: 0,
-                Color: -16777216,
-                Align: "left",
-                Bold: true,
-                Italic: false,
-                Underline: false,
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "LeftToRight",
-              Start: "Auto",
-              Speed: "2",
-              Repeat: "false",
-              Index: 2,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "hello&nbsp;how&nbsp;are&nbsp;you", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-        ],
-      },
-      {
-        Id: "1",
         Title: "I.2&nbsp;Hồ&nbsp;sơ&nbsp;dữ&nbsp;liệu",
         BackgroundImage: "./asset/img/bg1.jpg",
         BackgroundColor: 0,
@@ -141,7 +48,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "http://thuvien.bkt.net.vn/Library/Audios/Tieu-hoc/Tham-Khao/E9-NXBGD-UNIT2-LESSON5-CITY%20LIFE-AUDIO2.mp3" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -183,7 +90,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "http://thuvien.bkt.net.vn/Library/Audios/Tieu-hoc/Tham-Khao/E9-NXBGD-UNIT2-LESSON5-CITY%20LIFE-AUDIO2.mp3" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -215,7 +122,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -247,7 +154,100 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
+            IsRemoved: false,
+            IsActived: false,
+          },
+        ],
+      },
+      {
+        Id: "1",
+        Title: "I.1&nbsp;Mô&nbsp;tả&nbsp;bài&nbsp;toán",
+        BackgroundImage: "./asset/img/bg1.jpg",
+        BackgroundColor: 0,
+        BackgroundAlpha: 0,
+        Items: [
+          {
+            Id: "0",
+            Name: "iTextBlock",
+            Type: "component",
+            X: 141.049445005045,
+            Y: 60.78708375378411,
+            Width: 400.0,
+            Height: 60.0,
+            ScaleX: 1.0,
+            ScaleY: 1.0,
+            Rotation: 0,
+            ItemInfo: [
+              {
+                LeftMargin: 0,
+                Bullet: false,
+                Text: "Mô&nbsp;tả&nbsp;bài&nbsp;toán\r\n",
+                Font: "Arial",
+                Size: 36,
+                Leading: 0,
+                Color: -663885,
+                Align: "left",
+                Bold: true,
+                Italic: false,
+                Underline: false,
+              },
+            ],
+            Appear: {
+              Id: "NoID",
+              Name: "None",
+              Direction: "None",
+              Start: "Auto",
+              Speed: "0",
+              Repeat: "false",
+              Index: 1,
+              isAction: false,
+            },
+            Link: null,
+            Speech: { Value: "", IsMale: true },
+            Audio: { Url: "" },
+            IsRemoved: false,
+            IsActived: false,
+          },
+          {
+            Id: "1",
+            Name: "iTextBlock",
+            Type: "component",
+            X: 156.122479363451,
+            Y: 304.187689202825,
+            Width: 400.0,
+            Height: 60.0,
+            ScaleX: 1.0,
+            ScaleY: 1.0,
+            Rotation: 0,
+            ItemInfo: [
+              {
+                LeftMargin: 0,
+                Bullet: false,
+                Text: "hello&nbsp;how&nbsp;are&nbsp;you\r\n",
+                Font: "Arial",
+                Size: 36,
+                Leading: 0,
+                Color: -16777216,
+                Align: "left",
+                Bold: true,
+                Italic: false,
+                Underline: false,
+              },
+            ],
+            Appear: {
+              Id: "NoID",
+              Name: "None",
+              Direction: "LeftToRight",
+              Start: "Auto",
+              Speed: "2",
+              Repeat: "false",
+              Index: 2,
+              isAction: false,
+            },
+            Link: null,
+            Speech: { Value: "hello&nbsp;how&nbsp;are&nbsp;you", IsMale: true },
+            Audio: { Url: "http://thuvien.bkt.net.vn/Library/Audios/Tieu-hoc/Tham-Khao/E9-NXBGD-UNIT2-LESSON5-CITY%20LIFE-AUDIO2.mp3" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -298,7 +298,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -340,7 +340,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -397,7 +397,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -448,7 +448,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -480,7 +480,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -537,7 +537,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -579,7 +579,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -611,7 +611,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -662,7 +662,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -738,7 +738,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -761,10 +761,10 @@ const fakeData = [
             Id: "0",
             Name: "iQuizMultipleChoice",
             Type: "module",
-            X: 210.92058030471,
-            Y: 83.6560373420179,
-            Width: 356.20401643008,
-            Height: 348.323108302113,
+            X: 38.6474996277981,
+            Y: 33.0283885024618,
+            Width: 369.445005045408,
+            Height: 234.068819704736,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -830,7 +830,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -838,10 +838,10 @@ const fakeData = [
             Id: "1",
             Name: "iQuizMultipleChoice",
             Type: "module",
-            X: 910.92058030471,
-            Y: 203.6560373420179,
-            Width: 356.20401643008,
-            Height: 348.323108302113,
+            X: 257.281952252419,
+            Y: 303.357551294988,
+            Width: 375.573087366446,
+            Height: 234.66599394550903,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -902,12 +902,12 @@ const fakeData = [
               Start: "Auto",
               Speed: "0",
               Repeat: "false",
-              Index: 1,
+              Index: 2,
               isAction: false,
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -924,10 +924,10 @@ const fakeData = [
             Id: "0",
             Name: "iQuizTrueFalse",
             Type: "module",
-            X: 187.01884372097598,
-            Y: 132.023701752189,
-            Width: 492.942116395482,
-            Height: 268.484202721406,
+            X: 26.185772307765202,
+            Y: 38.2941356573353,
+            Width: 441.12560384813,
+            Height: 244.53869313513,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -996,7 +996,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1004,10 +1004,10 @@ const fakeData = [
             Id: "1",
             Name: "iQuizTrueFalse",
             Type: "module",
-            X: 887.01884372097598,
-            Y: 532.023701752189,
-            Width: 492.942116395482,
-            Height: 268.484202721406,
+            X: 218.64710462650297,
+            Y: 293.484852105368,
+            Width: 494.28799983827093,
+            Height: 259.590156303646,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -1071,12 +1071,12 @@ const fakeData = [
               Start: "Auto",
               Speed: "0",
               Repeat: "false",
-              Index: 1,
+              Index: 2,
               isAction: false,
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1093,10 +1093,10 @@ const fakeData = [
             Id: "0",
             Name: "iQuizSingleChoice",
             Type: "module",
-            X: 204.655437467952,
-            Y: 80.9789969270086,
-            Width: 385.131331981685,
-            Height: 359.210037718131,
+            X: 23.6341144129156,
+            Y: 28.983033253951003,
+            Width: 378.401914767743,
+            Height: 349.63183388362,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -1161,83 +1161,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-          {
-            Id: "1",
-            Name: "iQuizSingleChoice",
-            Type: "module",
-            X: 1004.655437467952,
-            Y: 280.9789969270086,
-            Width: 385.131331981685,
-            Height: 359.210037718131,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                Font: "Arial",
-                Size: 14,
-                Color: "0x333333",
-                Bold: true,
-                Underline: false,
-                Align: false,
-                Leading: 6,
-                Question: {
-                  Value: "Choose&nbsp;different&nbsp;words?",
-                  SelectIndex: 0,
-                  MediaType: "image",
-                  MediaUrl: "http://resource.bkt.net.vn/imagesPNG/fish.jpg",
-                  Answers: [
-                    {
-                      Id: "answer-0",
-                      Type: "text",
-                      Value: "a.&nbsp;Bull.",
-                      Checked: false,
-                    },
-                    {
-                      Id: "answer-1",
-                      Type: "text",
-                      Value: "b.&nbsp;Fish.",
-                      Checked: true,
-                    },
-                    {
-                      Id: "answer-2",
-                      Type: "text",
-                      Value: "c.&nbsp;Dog.",
-                      Checked: false,
-                    },
-                    {
-                      Id: "answer-3",
-                      Type: "text",
-                      Value: "c.&nbsp;Cat.",
-                      Checked: false,
-                    },
-                  ],
-                },
-                QuestionQuizJoin: {
-                  Value: null,
-                  MediaType: null,
-                  MediaUrl: null,
-                  Answers: [],
-                },
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "None",
-              Start: "Auto",
-              Speed: "0",
-              Repeat: "false",
-              Index: 1,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1254,10 +1178,10 @@ const fakeData = [
             Id: "0",
             Name: "iAnHien",
             Type: "module",
-            X: 188.346702198341,
-            Y: 69.8093939040572,
-            Width: 283.284199767702,
-            Height: 422.415074398554,
+            X: 40.2995234916199,
+            Y: 37.6539953167717,
+            Width: 353.661205032309,
+            Height: 312.910417734019,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -1267,7 +1191,7 @@ const fakeData = [
                   Title:
                     "3.&nbsp;Fill&nbsp;in&nbsp;each&nbsp;blank&nbsp;with&nbsp;a&nbsp;suitable&nbsp;word",
                   Image: null,
-                  DapAn: "0,4|5,8|10,13|24,32|62,66|78,81|114,123|161,169|172,179",
+                  DapAn: "24,32|62,66|78,81|114,123|161,169",
                   Drag_Drop:
                     "Miss&nbsp;Hoa:&nbsp;Good&nbsp;morning,&nbsp;children\r\nChildren:&nbsp;Good&nbsp;morning,&nbsp;Miss&nbsp;Hoa\r\nMiss&nbsp;Hoa:&nbsp;How&nbsp;are&nbsp;you?\r\nChildren:&nbsp;We're&nbsp;fine,&nbsp;thank&nbsp;you.&nbsp;How&nbsp;are&nbsp;you?\r\nMiss&nbsp;Hoa:&nbsp;Fine&nbsp;thank.&nbsp;Good&nbsp;bye.\r\nChildren:&nbsp;Bye",
                   MediaType: "image",
@@ -1288,49 +1212,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-          {
-            Id: "1",
-            Name: "iAnHien",
-            Type: "module",
-            X: 788.346702198341,
-            Y: 69.8093939040572,
-            Width: 283.284199767702,
-            Height: 422.415074398554,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                WhichWord: {
-                  Title:
-                    "3.&nbsp;Fill&nbsp;in&nbsp;each&nbsp;blank&nbsp;with&nbsp;a&nbsp;suitable&nbsp;word",
-                  Image: null,
-                  DapAn: "0,4|5,8|24,32|62,66|78,81|114,123|161,169|172,179",
-                  Drag_Drop:
-                    "Miss&nbsp;Hoa:&nbsp;Good&nbsp;morning,&nbsp;children\r\nChildren:&nbsp;Good&nbsp;morning,&nbsp;Miss&nbsp;Hoa\r\nMiss&nbsp;Hoa:&nbsp;How&nbsp;are&nbsp;you?\r\nChildren:&nbsp;We're&nbsp;fine,&nbsp;thank&nbsp;you.&nbsp;How&nbsp;are&nbsp;you?\r\nMiss&nbsp;Hoa:&nbsp;Fine&nbsp;thank.&nbsp;Good&nbsp;bye.\r\nChildren:&nbsp;Bye",
-                  MediaType: "image",
-                  MediaUrl: "",
-                  extend_Drags: [],
-                },
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "None",
-              Start: "Auto",
-              Speed: "0",
-              Repeat: "false",
-              Index: 1,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1347,10 +1229,10 @@ const fakeData = [
             Id: "0",
             Name: "iDienKhuyet",
             Type: "module",
-            X: 71.621643976113,
-            Y: 96.694325525473985,
-            Width: 307.217521842225,
-            Height: 338.70560720241,
+            X: 31.2451406924618,
+            Y: 25.5419541833953,
+            Width: 606.320490976162,
+            Height: 265.500763610079,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -1380,7 +1262,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1388,10 +1270,10 @@ const fakeData = [
             Id: "1",
             Name: "iDienKhuyet",
             Type: "module",
-            X: 671.621643976113,
-            Y: 496.694325525473985,
-            Width: 307.217521842225,
-            Height: 338.70560720241,
+            X: 186.69538336386702,
+            Y: 308.146653212244,
+            Width: 567.289166105951,
+            Height: 251.846751257774,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -1400,7 +1282,7 @@ const fakeData = [
                 WhichWord: {
                   Title: "Suggested&nbsp;fill&nbsp;in&nbsp;the&nbsp;blank",
                   Image: null,
-                  DapAn: "3,6|57,59|60,63|95,104|150,157|176,180|240,246",
+                  DapAn: "60,63|95,104|150,157|240,246",
                   Drag_Drop:
                     "a)&nbsp;My&nbsp;printer&nbsp;does&nbsp;not&nbsp;work&nbsp;because&nbsp;I&nbsp;have&nbsp;not&nbsp;turned&nbsp;it&nbsp;on&nbsp;yet\r\nb)&nbsp;The&nbsp;printer&nbsp;is&nbsp;still&nbsp;under&nbsp;guarantee.&nbsp;So&nbsp;the&nbsp;company&nbsp;will&nbsp;replace&nbsp;it.\r\nc)&nbsp;We&nbsp;have&nbsp;already&nbsp;taken&nbsp;the&nbsp;English&nbsp;exam.\r\nd)&nbsp;You&nbsp;can&nbsp;read&nbsp;this&nbsp;instruction&nbsp;how&nbsp;to&nbsp;repair&nbsp;it&nbsp;in&nbsp;the&nbsp;manual",
                   MediaType: "image",
@@ -1416,12 +1298,12 @@ const fakeData = [
               Start: "Auto",
               Speed: "0",
               Repeat: "false",
-              Index: 1,
+              Index: 2,
               isAction: false,
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1438,8 +1320,8 @@ const fakeData = [
             Id: "0",
             Name: "iDropList",
             Type: "module",
-            X: 185.658068613265,
-            Y: 77.2614571746352,
+            X: 25.4979389214485,
+            Y: 36.8961695863405,
             Width: 336.011283859884,
             Height: 396.28356289965,
             ScaleX: 1.0,
@@ -1475,7 +1357,52 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
+            IsRemoved: false,
+            IsActived: false,
+          },
+          {
+            Id: "1",
+            Name: "iDropList",
+            Type: "module",
+            X: 383.50293470315592,
+            Y: 45.790216004100408,
+            Width: 336.011283859884,
+            Height: 396.28356289965,
+            ScaleX: 1.0,
+            ScaleY: 1.0,
+            Rotation: 0,
+            ItemInfo: [
+              {
+                WhichWord: {
+                  Title: "3.&nbsp;Select&nbsp;a&nbsp;suitable&nbsp;word",
+                  Image: null,
+                  DapAn: "24,32|62,66|78,81|114,123|161,169",
+                  Drag_Drop:
+                    "Miss&nbsp;Hoa:&nbsp;Good&nbsp;morning,&nbsp;children\r\nChildren:&nbsp;Good&nbsp;morning,&nbsp;Miss&nbsp;Hoa\r\nMiss&nbsp;Hoa:&nbsp;How&nbsp;are&nbsp;you?\r\nChildren:&nbsp;We're&nbsp;fine,&nbsp;thank&nbsp;you.&nbsp;How&nbsp;are&nbsp;you?\r\nMiss&nbsp;Hoa:&nbsp;Fine&nbsp;thank.&nbsp;Good&nbsp;bye.\r\nChildren:&nbsp;Bye",
+                  MediaType: "image",
+                  MediaUrl: "",
+                  extend_Drags: [
+                    { Data: "boy" },
+                    { Data: "girl" },
+                    { Data: "hot" },
+                  ],
+                },
+              },
+            ],
+            Appear: {
+              Id: "NoID",
+              Name: "None",
+              Direction: "None",
+              Start: "Auto",
+              Speed: "0",
+              Repeat: "false",
+              Index: 2,
+              isAction: false,
+            },
+            Link: null,
+            Speech: { Value: "", IsMale: true },
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1492,10 +1419,10 @@ const fakeData = [
             Id: "0",
             Name: "iKeoTha",
             Type: "module",
-            X: 76.7319911337368,
-            Y: 70.675607485238,
-            Width: 579.944325221659,
-            Height: 383.880732911668,
+            X: 21.5507699794134,
+            Y: 22.1004308959342,
+            Width: 449.798256504847,
+            Height: 359.935223325391,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -1525,7 +1452,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1533,10 +1460,10 @@ const fakeData = [
             Id: "1",
             Name: "iKeoTha",
             Type: "module",
-            X: 1086.7319911337368,
-            Y: 70.675607485238,
-            Width: 479.944325221659,
-            Height: 383.880732911668,
+            X: 178.619377677789,
+            Y: 221.190239170404,
+            Width: 553.158094986022,
+            Height: 342.831287906622,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -1561,12 +1488,12 @@ const fakeData = [
               Start: "Auto",
               Speed: "0",
               Repeat: "false",
-              Index: 1,
+              Index: 2,
               isAction: false,
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1583,12 +1510,12 @@ const fakeData = [
             Id: "0",
             Name: "iQuizJoin",
             Type: "module",
-            X: 35.0385144791332,
-            Y: 48.6340934332381,
-            Width: 687.544841766357,
-            Height: 479.289310822081,
+            X: 43.7867568572575,
+            Y: 18.5311670962048,
+            Width: 698.084841627465,
+            Height: 319.034255036321,
             ScaleX: 1.0,
-            c: 1.0,
+            ScaleY: 1.0,
             Rotation: 0,
             ItemInfo: [
               {
@@ -1750,21 +1677,20 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
-
           {
             Id: "1",
             Name: "iQuizJoin",
             Type: "module",
-            X: 1235.0385144791332,
-            Y: 448.6340934332381,
-            Width: 587.544841766357,
-            Height: 479.289310822081,
+            X: 39.0761648074983,
+            Y: 343.03868146653195,
+            Width: 710.197792612561,
+            Height: 199.25202854055297,
             ScaleX: 1.0,
-            c: 1.0,
+            ScaleY: 1.0,
             Rotation: 0,
             ItemInfo: [
               {
@@ -1921,12 +1847,12 @@ const fakeData = [
               Start: "Auto",
               Speed: "0",
               Repeat: "false",
-              Index: 1,
+              Index: 2,
               isAction: false,
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -1943,10 +1869,10 @@ const fakeData = [
             Id: "0",
             Name: "iListenAndNumber",
             Type: "module",
-            X: 72.4371668834095,
-            Y: 67.7359120135731,
-            Width: 667.90989881478,
-            Height: 430.66488666388597,
+            X: 44.846556306247905,
+            Y: 24.633994758275396,
+            Width: 616.272035611173,
+            Height: 239.042426365169,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -2004,7 +1930,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -2012,10 +1938,10 @@ const fakeData = [
             Id: "1",
             Name: "iListenAndNumber",
             Type: "module",
-            X: 1272.4371668834095,
-            Y: 407.7359120135731,
-            Width: 667.90989881478,
-            Height: 430.66488666388597,
+            X: 58.3053907341316,
+            Y: 275.035609289052,
+            Width: 482.35663305373004,
+            Height: 256.146361783938,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -2068,12 +1994,12 @@ const fakeData = [
               Start: "Auto",
               Speed: "0",
               Repeat: "false",
-              Index: 1,
+              Index: 2,
               isAction: false,
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -2092,7 +2018,7 @@ const fakeData = [
             Type: "module",
             X: 89.4735174738265,
             Y: 35.6351025149737,
-            Width: 427.640601283054,
+            Width: 627.640601283054,
             Height: 523.597322644798,
             ScaleX: 1.0,
             ScaleY: 1.0,
@@ -2221,146 +2147,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-          {
-            Id: "1",
-            Name: "iListenAndTick",
-            Type: "module",
-            X: 789.4735174738265,
-            Y: 435.6351025149737,
-            Width: 427.640601283054,
-            Height: 523.597322644798,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                Font: null,
-                Size: 0,
-                Color: null,
-                Bold: false,
-                Underline: false,
-                Align: false,
-                Leading: 0,
-                Question: {
-                  Value: "Listen&nbsp;and&nbsp;number",
-                  SelectIndex: 0,
-                  MediaType: "audio",
-                  MediaUrl:
-                    "http://resource.bkt.net.vn/AudioMP3/ListenAndTick.mp3",
-                  Answers: [
-                    {
-                      Id: "1",
-                      ListAnswerInfoDetail: [
-                        {
-                          Id: "1a",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/4.jpg",
-                          AnswerCheck: false,
-                        },
-                        {
-                          Id: "1b",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/3.jpg",
-                          AnswerCheck: true,
-                        },
-                        {
-                          Id: "1c",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/1.jpg",
-                          AnswerCheck: false,
-                        },
-                      ],
-                    },
-                    {
-                      Id: "2",
-                      ListAnswerInfoDetail: [
-                        {
-                          Id: "2a",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/1.jpg",
-                          AnswerCheck: true,
-                        },
-                        {
-                          Id: "2b",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/4.jpg",
-                          AnswerCheck: false,
-                        },
-                        {
-                          Id: "2c",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/2.jpg",
-                          AnswerCheck: false,
-                        },
-                      ],
-                    },
-                    {
-                      Id: "3",
-                      ListAnswerInfoDetail: [
-                        {
-                          Id: "3a",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/4.jpg",
-                          AnswerCheck: true,
-                        },
-                        {
-                          Id: "3b",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/2.jpg",
-                          AnswerCheck: false,
-                        },
-                        {
-                          Id: "3c",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/1.jpg",
-                          AnswerCheck: false,
-                        },
-                      ],
-                    },
-                    {
-                      Id: "4",
-                      ListAnswerInfoDetail: [
-                        {
-                          Id: "4a",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/2.jpg",
-                          AnswerCheck: true,
-                        },
-                        {
-                          Id: "4b",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/3.jpg",
-                          AnswerCheck: false,
-                        },
-                        {
-                          Id: "4c",
-                          ImageUrl:
-                            "http://resource.bkt.net.vn/imagesPNG/1.jpg",
-                          AnswerCheck: false,
-                        },
-                      ],
-                    },
-                  ],
-                },
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "None",
-              Start: "Auto",
-              Speed: "0",
-              Repeat: "false",
-              Index: 1,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -2377,8 +2164,8 @@ const fakeData = [
             Id: "0",
             Name: "iQuizJoinImageImage",
             Type: "module",
-            X: 137.896411342372,
-            Y: 68.0073999327279,
+            X: 24.1692604267544,
+            Y: 30.3787420114363,
             Width: 510.436287868559,
             Height: 465.035054497571,
             ScaleX: 1.0,
@@ -2497,139 +2284,10 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
-          {
-            Id: "1",
-            Name: "iQuizJoinImageImage",
-            Type: "module",
-            X: 1037.896411342372,
-            Y: 368.0073999327279,
-            Width: 510.436287868559,
-            Height: 465.035054497571,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                Font: "Arial",
-                Size: 14,
-                Color: "0x333333",
-                Bold: true,
-                Underline: false,
-                Align: false,
-                Leading: 6,
-                Question: {
-                  Value: null,
-                  SelectIndex: 0,
-                  MediaType: null,
-                  MediaUrl: null,
-                  Answers: [],
-                },
-                QuestionQuizJoin: {
-                  Value:
-                    "Match&nbsp;the&nbsp;pictures&nbsp;with&nbsp;the&nbsp;customs&nbsp;and&nbsp;traditions.",
-                  MediaType: "audio",
-                  MediaUrl: "http://resource.bkt.net.vn/AudioMP3/14.mp3",
-                  Answers: [
-                    {
-                      Id: "answer-0",
-                      AnswerLeft: {
-                        Id: "left-0",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-1.jpg",
-                        Index: 0,
-                      },
-                      AnswerRight: {
-                        Id: "right-0",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-2.jpg",
-                        Index: 0,
-                      },
-                    },
-                    {
-                      Id: "answer-1",
-                      AnswerLeft: {
-                        Id: "left-1",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-3.png",
-                        Index: 1,
-                      },
-                      AnswerRight: {
-                        Id: "right-1",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-4.jpg",
-                        Index: 1,
-                      },
-                    },
-                    {
-                      Id: "answer-2",
-                      AnswerLeft: {
-                        Id: "left-2",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-5.png",
-                        Index: 2,
-                      },
-                      AnswerRight: {
-                        Id: "right-2",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-6.jpg",
-                        Index: 2,
-                      },
-                    },
-                    {
-                      Id: "answer-3",
-                      AnswerLeft: {
-                        Id: "left-3",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-7.png",
-                        Index: 3,
-                      },
-                      AnswerRight: {
-                        Id: "right-3",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-8.jpg",
-                        Index: 3,
-                      },
-                    },
-                    {
-                      Id: "answer-4",
-                      AnswerLeft: {
-                        Id: "left-4",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-9.png",
-                        Index: 3,
-                      },
-                      AnswerRight: {
-                        Id: "right-4",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/14-10.jpg",
-                        Index: 3,
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "None",
-              Start: "Auto",
-              Speed: "0",
-              Repeat: "false",
-              Index: 1,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-
         ],
       },
       {
@@ -2749,121 +2407,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-          {
-            Id: "1",
-            Name: "iQuizJoinTextImage",
-            Type: "module",
-            X: 1029.850020757478,
-            Y: 377.1558580415225,
-            Width: 537.997988373885,
-            Height: 380.137112022386,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                Font: "Arial",
-                Size: 14,
-                Color: "0x333333",
-                Bold: true,
-                Underline: false,
-                Align: false,
-                Leading: 6,
-                Question: {
-                  Value: null,
-                  SelectIndex: 0,
-                  MediaType: null,
-                  MediaUrl: null,
-                  Answers: [],
-                },
-                QuestionQuizJoin: {
-                  Value:
-                    "Match&nbsp;the&nbsp;pictures&nbsp;with&nbsp;the&nbsp;customs&nbsp;and&nbsp;traditions.",
-                  MediaType: "audio",
-                  MediaUrl: "http://resource.bkt.net.vn/AudioMP3/U1-L1-2-1.mp3",
-                  Answers: [
-                    {
-                      Id: "answer-0",
-                      AnswerLeft: {
-                        Id: "left-0",
-                        Type: "text",
-                        Value: "105,&nbsp;Hoa&nbsp;Binh&nbsp;Lane",
-                        Index: 1,
-                      },
-                      AnswerRight: {
-                        Id: "right-0",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/imagesPNG/A-1.jpg",
-                        Index: 1,
-                      },
-                    },
-                    {
-                      Id: "answer-1",
-                      AnswerLeft: {
-                        Id: "left-1",
-                        Type: "text",
-                        Value: "97,&nbsp;Village&nbsp;Road",
-                        Index: 2,
-                      },
-                      AnswerRight: {
-                        Id: "right-1",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/ImagesPNG/A-2.jpg",
-                        Index: 2,
-                      },
-                    },
-                    {
-                      Id: "answer-2",
-                      AnswerLeft: {
-                        Id: "left-2",
-                        Type: "text",
-                        Value: "75,&nbsp;Hai&nbsp;Ba&nbsp;Trung&nbsp;street",
-                        Index: 3,
-                      },
-                      AnswerRight: {
-                        Id: "right-2",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/ImagesPNG/A-3.jpg",
-                        Index: 3,
-                      },
-                    },
-                    {
-                      Id: "answer-3",
-                      AnswerLeft: {
-                        Id: "left-3",
-                        Type: "text",
-                        Value:
-                          "Flat&nbsp;8,&nbsp;second&nbsp;floor,&nbsp;City&nbsp;Towerl",
-                        Index: 4,
-                      },
-                      AnswerRight: {
-                        Id: "right-3",
-                        Type: "image",
-                        Value: "http://resource.bkt.net.vn/ImagesPNG/A-4.jpg",
-                        Index: 4,
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "None",
-              Start: "Auto",
-              Speed: "0",
-              Repeat: "false",
-              Index: 1,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -2882,7 +2426,7 @@ const fakeData = [
             Type: "module",
             X: 118.727564473706,
             Y: 52.2857350138172,
-            Width: 487.162028236973,
+            Width: 587.162028236973,
             Height: 419.374540801857,
             ScaleX: 1.0,
             ScaleY: 1.0,
@@ -2948,83 +2492,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-          {
-            Id: "1",
-            Name: "iKeoThaImageContent",
-            Type: "module",
-            X: 918.727564473706,
-            Y: 52.2857350138172,
-            Width: 487.162028236973,
-            Height: 419.374540801857,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                Font: null,
-                Size: 0,
-                Color: null,
-                Bold: false,
-                Underline: false,
-                Align: false,
-                Leading: 0,
-                Question: {
-                  ExtendDragInfo: [
-                    { Data: "playing&nbsp;football" },
-                    { Data: "sing" },
-                  ],
-                  Value:
-                    "Find&nbsp;words/&nbsp;phrases&nbsp;in&nbsp;the&nbsp;box&nbsp;to&nbsp;describle&nbsp;the&nbsp;photos.&nbsp;Then&nbsp;listen&nbsp;to&nbsp;check&nbsp;your&nbsp;answer",
-                  SelectIndex: 0,
-                  MediaType: "audio",
-                  MediaUrl: "http://resource.bkt.net.vn/AudioMP3/U1-L1-2-1.mp3",
-                  Answers: [
-                    {
-                      Id: "1",
-                      Type: "image",
-                      Value: "http://resource.bkt.net.vn/imagesPNG/A-1.jpg",
-                      Answer: "105,&nbsp;Hoa&nbsp;Binh&nbsp;Lane",
-                    },
-                    {
-                      Id: "2",
-                      Type: "image",
-                      Value: "http://resource.bkt.net.vn/ImagesPNG/A-2.jpg",
-                      Answer: "97,&nbsp;Village&nbsp;Road",
-                    },
-                    {
-                      Id: "3",
-                      Type: "image",
-                      Value: "http://resource.bkt.net.vn/ImagesPNG/A-3.jpg",
-                      Answer: "75,&nbsp;Hai&nbsp;Ba&nbsp;Trung&nbsp;street",
-                    },
-                    {
-                      Id: "4",
-                      Type: "image",
-                      Value: "http://resource.bkt.net.vn/ImagesPNG/A-4.jpg",
-                      Answer:
-                        "Flat&nbsp;8,&nbsp;second&nbsp;floor,&nbsp;City&nbsp;Towerl",
-                    },
-                  ],
-                },
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "None",
-              Start: "Auto",
-              Speed: "0",
-              Repeat: "false",
-              Index: 1,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -3044,63 +2512,8 @@ const fakeData = [
             Type: "module",
             X: 25.1846935093449,
             Y: 40.5180920595184,
-            Width: 328.736051516217,
-            Height: 347.98403560005607,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                Font: null,
-                Size: 0,
-                Color: null,
-                Bold: false,
-                Underline: false,
-                Align: false,
-                Leading: 0,
-                Question: {
-                  ExtendDragInfo: [
-                    { Data: "to" },
-                    { Data: "too" },
-                    { Data: "here" },
-                  ],
-                  Value:
-                    "Find&nbsp;words/&nbsp;phrases&nbsp;in&nbsp;the&nbsp;box&nbsp;to&nbsp;describle&nbsp;the&nbsp;photos.&nbsp;Then&nbsp;listen&nbsp;to&nbsp;check&nbsp;your&nbsp;answer",
-                  SelectIndex: 0,
-                  MediaType: "audio",
-                  MediaUrl:
-                    "http://thuvien.bkt1.vn/Library/Audios/Tieu-hoc/Lop-4/Tieng-Anh-4/02_02_Track_2.mp3",
-                  AnswerChoose: {
-                    Answer:
-                      "The&nbsp;two",
-                  },
-                },
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "None",
-              Start: "Auto",
-              Speed: "0",
-              Repeat: "false",
-              Index: 1,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-          {
-            Id: "1",
-            Name: "iChooseAndComplete",
-            Type: "module",
-            X: 805.1846935093449,
-            Y: 230.5180920595184,
-            Width: 328.736051516217,
-            Height: 347.98403560005607,
+            Width: 528.736051516217,
+            Height: 497.98403560005607,
             ScaleX: 1.0,
             ScaleY: 1.0,
             Rotation: 0,
@@ -3144,7 +2557,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -3164,83 +2577,6 @@ const fakeData = [
             Type: "module",
             X: 130.032182831433,
             Y: 92.0545835899538,
-            Width: 367.829887274934,
-            Height: 319.399839551654,
-            ScaleX: 1.0,
-            ScaleY: 1.0,
-            Rotation: 0,
-            ItemInfo: [
-              {
-                Font: "Arial",
-                Size: 14,
-                Color: "0x333333",
-                Bold: true,
-                Underline: false,
-                Align: false,
-                Leading: 6,
-                Question: {
-                  Value: "Which&nbsp;image&nbsp;is&nbsp;true?",
-                  SelectIndex: 0,
-                  MediaType: "audio",
-                  MediaUrl:
-                    "http://resource.bkt.net.vn/AudioMP3/whereareyoufrom.mp3",
-                  Answers: [
-                    {
-                      Id: "answer-0",
-                      Type: "text",
-                      Value: "http://resource.bkt.net.vn/imagesPNG/14-3.png",
-                      Checked: false,
-                    },
-                    {
-                      Id: "answer-1",
-                      Type: "text",
-                      Value: "http://resource.bkt.net.vn/imagesPNG/14-1.jpg",
-                      Checked: true,
-                    },
-                    {
-                      Id: "test",
-                      Type: "text",
-                      Value: "http://resource.bkt.net.vn/imagesPNG/14-5.png",
-                      Checked: false,
-                    },
-                    {
-                      Id: "test",
-                      Type: "text",
-                      Value: "http://resource.bkt.net.vn/imagesPNG/14-7.png",
-                      Checked: false,
-                    },
-                  ],
-                },
-                QuestionQuizJoin: {
-                  Value: null,
-                  MediaType: null,
-                  MediaUrl: null,
-                  Answers: [],
-                },
-              },
-            ],
-            Appear: {
-              Id: "NoID",
-              Name: "None",
-              Direction: "None",
-              Start: "Auto",
-              Speed: "0",
-              Repeat: "false",
-              Index: 1,
-              isAction: false,
-            },
-            Link: null,
-            Speech: { Value: "", IsMale: true },
-            Audio: null,
-            IsRemoved: false,
-            IsActived: false,
-          },
-          {
-            Id: "1",
-            Name: "iQuizSingleChoiceWithImage",
-            Type: "module",
-            X: 930.032182831433,
-            Y: 292.0545835899538,
             Width: 467.829887274934,
             Height: 319.399839551654,
             ScaleX: 1.0,
@@ -3308,7 +2644,7 @@ const fakeData = [
             },
             Link: null,
             Speech: { Value: "", IsMale: true },
-            Audio: null,
+            Audio: { Url: "" },
             IsRemoved: false,
             IsActived: false,
           },
@@ -3334,6 +2670,7 @@ const app = () => {
   const audioRefesh = new Audio("./asset/audio/refresh.mp3");
 
   const listLi = [];
+  let DA_Answer = []
   let listarrayChooseAndComplete = []
   let dataLeft = []
   let dataRight = []
@@ -3441,6 +2778,7 @@ const app = () => {
 
   // Hàm xử lý sự kiện click
   function handleClick(event, idActiveClick) {
+    DA_Answer = []
     listarrayQuizoinTextImage = []
     listarrayQuizoinTextImageRight = []
     listarrayQuizoin = []
@@ -3483,7 +2821,7 @@ const app = () => {
     containerElement.innerHTML = "";
 
     containerElement.style.backgroundImage =
-      "url(' " + currentElement?.backgroundimage;
+      "url('" + currentElement?.backgroundimage + "')";
 
     containerElement.style.overflow = "hidden";
 
@@ -3537,6 +2875,28 @@ const app = () => {
           imgElement.style.width = `${dataItem?.Width}px`;
           imgElement.style.height = `${dataItem?.Height}px`;
           intermediary.appendChild(imgElement);
+        }
+        if (dataItem?.Audio?.Url !== "") {
+          var imgElement = document.createElement("img");
+          imgElement.src = '../asset/img/talking.png'
+          var audioElement = document.createElement("audio");
+          audioElement.src = dataItem?.Audio?.Url
+          imgElement.style.position = "absolute";
+          imgElement.style.top = "-30px"
+          imgElement.style.left = "-50px"
+          imgElement.style.height = "46px"
+          imgElement.style.objectFit = "contain"
+          imgElement.style.cursor = "pointer"
+          imgElement.addEventListener("click", function (event) {
+            event.stopPropagation()
+            console.log('audioElement', audioElement);
+            audioElement.pause()
+            audioElement.currentTime = 0
+            audioElement.play()
+          })
+          intermediary.appendChild(imgElement);
+          intermediary.appendChild(audioElement);
+          console.log("dung");
         }
         // Thêm bài tập iQuizSingleChoice
         else if (dataItem?.Name === "iQuizSingleChoice") {
@@ -3635,6 +2995,81 @@ const app = () => {
           DA_Drop[i].push(...drop,)
           DA_Hiden[i].push(...replacedString,)
           iAnHien(intermediary,
+            dataItem,
+            DA_Drop,
+            DA_Hiden,
+            i,
+            arrayHide
+          );
+        }
+        else if (dataItem?.Name === "iDropList") {
+          DA_Hiden.push([])
+          DA_Drop.push([])
+          arrayHide.push([])
+          dataRight.push([])
+          dataRightRandom.push([])
+          DA_Answer.push([])
+          function replaceSubstringInRange(arr, str) {
+            let tempStr = str; // Biến tạm để lưu trữ chuỗi thay thế
+            let offset = 0; // Biến để tính toán sự thay đổi độ dài
+
+
+            arr.forEach((item, index) => {
+              let values = item.split(","); // Tách mỗi phần tử thành mảng 2 giá trị
+              let start = parseInt(values[0]);
+              let end = parseInt(values[1]);
+
+              let substringToReplace = tempStr.substring(start, end + 1); // Chuỗi con cần thay thế
+
+              let replacement = "xxxx"; // Giá trị thay thế
+
+              let replacementLength = substringToReplace.length - replacement.length; // Độ chênh lệch độ dài do thay thế
+              let replacementStart = start - offset; // Vị trí bắt đầu của chuỗi cần thay thế trong chuỗi gốc
+              let replacementEnd = end - offset + 1; // Vị trí kết thúc của chuỗi cần thay thế trong chuỗi gốc
+
+              tempStr = tempStr.substring(0, replacementStart) + replacement + tempStr.substring(replacementEnd); // Thay thế chuỗi con trong chuỗi ban đầu
+              offset += replacementLength; // Cập nhật sự thay đổi độ dài
+            });
+
+
+            return tempStr.split("\n"); // Trả về giá trị của biến tạm
+          }
+          function replaceSubstringInRange2(arr, str) {
+            arr.forEach((item, index) => {
+              let values = item.split(","); // Tách mỗi phần tử thành mảng 2 giá trị
+              let start = parseInt(values[0]);
+              let end = parseInt(values[1]);
+
+              let substringToReplace = str.substring(start, end + 1); // Chuỗi con cần thay thế
+              DA_Answer[i].push({ value: "", index })
+              console.log("DA_Answer", DA_Answer);
+              arrayHide[i].push(substringToReplace)
+            });
+
+            return str;
+          }
+
+          let dataorigin = dataItem?.ItemInfo[0]?.WhichWord?.Drag_Drop
+          let drop = dataorigin.split("\r\n");
+          let da = dataItem?.ItemInfo[0]?.WhichWord?.DapAn.split("|");
+
+          replaceSubstringInRange2(da, dataorigin);
+          let replacedString = replaceSubstringInRange(da, dataorigin);
+          DA_Drop[i].push(...drop,)
+          DA_Hiden[i].push(...replacedString,)
+          dataItem?.ItemInfo[0]?.WhichWord?.extend_Drags?.forEach((item) => {
+            arrayHide[i].push(item.Data)
+          })
+          console.log("arrayHide", arrayHide);
+          arrayHide[i]?.forEach((item, index) => {
+
+            dataRight[i].push({ value: item, answer: " " })
+
+          })
+          let randomizedTextRight = randomizeText(dataRight[i]);
+          dataRightRandom[i].push(...randomizedTextRight)
+          console.log("dataRightRandom", dataRightRandom);
+          iDropList(intermediary,
             dataItem,
             DA_Drop,
             DA_Hiden,
@@ -4125,8 +3560,12 @@ const app = () => {
       }
 
       // Bắt đầu chuyển đổi văn bản thành giọng nói
-      intermediary.addEventListener("click", () =>
+      intermediary.addEventListener("click", (event) => {
+        event.stopPropagation();
         speechSynthesis.speak(utterance)
+        console.log("zo");
+
+      }
       );
     }
   }
@@ -5440,7 +4879,91 @@ const app = () => {
     })
 
   }
+  function iDropList(intermediary, dataItem, DA_Drop, DA_Hiden, i, arrayHide) {
 
+    listarrayCheckBoxs = []
+
+    intermediary.innerHTML = RenderFormDropList(dataItem, DA_Drop, DA_Hiden, i, arrayHide);
+    const listForm = document.querySelectorAll('#form')
+    listForm.forEach((form, index) => {
+      listarrayCheckBoxs.push({ listCheckBox: form.querySelectorAll('.select-option'), index })
+
+      // Lặp qua tất cả các thẻ input vừa được innerHTML vào
+
+    })
+
+    listarrayCheckBoxs.forEach((arrayCheckBoxs, indexArray) => {
+
+      arrayCheckBoxs?.listCheckBox?.forEach((select, indexCheckbox) => {
+        const idpl = select?.getAttribute("idpl");
+
+        select.addEventListener("change", function (e) {
+          DA_Answer[indexArray].splice(e?.target.getAttribute("index"), 1, { value: e?.target?.value, index: +e?.target.getAttribute("index") })
+
+
+        });
+      })
+    });
+
+    // handle btnCheck
+    const listCheckBtn = document.querySelectorAll("#check");
+
+    const spanElementDetail = document.createElement("span");
+    listCheckBtn.forEach((checkBtn, index) => {
+      spanElementDetail.setAttribute("idpl", checkBtn?.getAttribute("idpl"))
+      checkBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        const wrapperCheck = checkBtn.parentNode;
+        const listSelect = wrapperCheck?.parentNode.querySelector(".wrapper__list");
+        const option = listSelect.querySelectorAll(".select-option")
+        let count = 0
+        option?.forEach((item, index) => {
+          if (item?.getAttribute("value") === DA_Answer[i][index]?.value) {
+            DA_Answer[i].splice(index, 1, { ...DA_Answer[i][index], active: true })
+            console.log("DA_Answer", DA_Answer);
+            count++
+          }
+          else {
+            DA_Answer[i].splice(index, 1, { ...DA_Answer[i][index], active: false })
+          }
+        })
+        const div = document.querySelectorAll(".wrapper__list")
+
+
+
+        const isExactly = +checkBtn?.getAttribute("idpl") === +spanElementDetail.getAttribute("idpl")
+        if (count === 0 && isExactly) {
+          answerFail(spanElementDetail)
+        }
+        else if (count > 0 && isExactly) {
+          answerSuccess(spanElementDetail, true, count, DA_Answer[i]?.length);
+        }
+
+
+        if (isExactly) {
+          wrapperCheck.insertBefore(spanElementDetail, checkBtn);
+          // div[i].innerHTML = RenderListOption(dataItem, DA_Drop, DA_Hiden, i, arrayHide)
+          const listOption = div[i].querySelectorAll(".list-true-false");
+          listOption.forEach((item, index) => {
+            if (DA_Answer[i][index]?.active === true) {
+
+              item.querySelector('.select-option').classList.add('true')
+            }
+            else {
+              item.querySelector('.select-option').classList.add('false')
+
+            }
+          })
+        }
+
+        count = 0
+
+      });
+    })
+
+  }
+
+  // 
   let arrayAnswerDienKhuyet = []
   function iDienKhuyet(intermediary, dataItem, DA_Drop, DA_Hiden, i, arrayHide) {
     listarrayCheckBoxs = []
@@ -6426,6 +5949,60 @@ ${dataItem?.ItemInfo[0]?.Question?.MediaType.length > 0
       
       </form>`;
   }
+  function RenderFormDropList(dataItem, DA_Drop, DA_Hiden, i, arrayHide) {
+    let countDaAnHien = -1;
+    return `<form id="form" action="">
+        <div class="title-question">
+        ${dataItem?.ItemInfo[0]?.WhichWord?.Title}
+        </div>
+<div class="wrapper__list">
+  ${DA_Hiden[i]
+        ?.map((item, index) => {
+          console.log('DA_Answer[i][index]', DA_Answer[i][index]);
+          return `
+   
+      <div class="list-true-false">
+          <span class="span-anhien">${item.replace(/xxxx/g, () => {
+            countDaAnHien++;
+
+            // Nếu đã hết các từ bị ẩn thì reset về -1
+            if (countDaAnHien >= arrayHide[i].length) {
+              countDaAnHien = -1;
+            }
+
+            // Nếu có từ bị ẩn thì hiển thị input checkbox
+            if (countDaAnHien !== -1) {
+              return `<label class="">
+              <select  index=${index}  value=${arrayHide[i][countDaAnHien]} class="select-option">
+             <option disabled selected style="display:none"></option>
+                  ${dataRightRandom[i]?.map((itemOption, index) => {
+                return `
+                    <option class="option" value=${itemOption?.value}>${itemOption?.value}</option>
+                  `
+              }).join("")}
+              </select>
+             
+            </label> `;
+            }
+
+            // Nếu không có từ bị ẩn, trả về chuỗi gốc (không hiển thị input checkbox)
+            return item;
+          })}
+          </span>
+   
+      </div>
+   `;
+        })
+        .join("")}
+</div>
+ 
+      <div class="wrapper-check">
+  <button id="check" class="check" idpl=${dataItem?.Id} >Check</button>
+</div>
+      </form>`;
+  }
+
+
 
   let countDaDienKhuyet = -1
 

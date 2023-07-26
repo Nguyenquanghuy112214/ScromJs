@@ -894,3 +894,31 @@ form {
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
 }
+
+.select-option {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+
+
+  &.true {
+    background-color: #016e35;
+    color: white;
+
+    .option {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  &.false {
+    background-color: #a31919;
+    color: white;
+
+    .option {
+      background-color: white;
+      color: black;
+    }
+
+  }
+}
